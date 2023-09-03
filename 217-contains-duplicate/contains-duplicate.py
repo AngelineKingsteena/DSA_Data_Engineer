@@ -1,8 +1,11 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        hset = set()
-        for idx in nums:
-            if idx in hset:
+        counter = {}
+        for num in nums:
+            if num not in counter:
+                counter[num] = 0
+            counter[num] += 1
+        for num, freq in counter.items():
+            if freq > 1:
                 return True
-            else:
-                hset.add(idx)
+        return False
