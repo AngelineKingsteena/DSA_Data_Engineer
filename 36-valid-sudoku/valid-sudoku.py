@@ -11,6 +11,8 @@ This will require a single traversal. The same box condition can be checked usin
                 if char != '.': 
                     if char in boardMap:
                         for pos in boardMap[char]:
+                            # check if its in same x-axis or y-axis or
+                            # (comes within the 3*3 box)
                             if (pos[0]== x) or (pos[1] == y) or (pos[0]//3 == x//3 and pos[1]//3 == y//3):
                                 return False
                     boardMap[char].append((x,y))
