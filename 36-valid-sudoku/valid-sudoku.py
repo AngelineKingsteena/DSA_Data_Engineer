@@ -11,6 +11,7 @@ This will require a single traversal. The same box condition can be checked usin
                 if char != '.': 
                     if char in boardMap:
                         for pos in boardMap[char]:
+                            # condition in english:-
                             # check if its in same x-axis or y-axis or
                             # (comes within the 3*3 box)
                             # pos is old position of char,(x,y) will become
