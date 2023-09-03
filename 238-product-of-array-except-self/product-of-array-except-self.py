@@ -1,6 +1,7 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         ## explanation https://youtu.be/bNvIQI2wAjk?feature=shared
+        ## T.C= O(n)
         res = [1] * (len (nums))
         prefix = 1
         for i in range(len (nums)):
