@@ -9,9 +9,9 @@ class Solution:
         ## video solution :-https://www.youtube.com/watch?v=hTM3phVI6YQ&ab_channel=NeetCode
 
         ######## recursive
-        if not root:
-            return 0
-        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+        # if not root:
+        #     return 0
+        # return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
         ###### bfs or level order traversal
         # if not root:
@@ -27,5 +27,18 @@ class Solution:
         #             q.append (node. right)
         #     level += 1
         # return level
+
+        ## DFS PREDORDER
+
+        stack = [[root, 1]]
+        res = 0
+        while stack:
+            node, depth = stack.pop()
+            if node:
+                res = max(res, depth)
+                stack.append([node.left, depth + 1])
+                stack.append([node.right, depth + 1])
+        return res
+
         
         
