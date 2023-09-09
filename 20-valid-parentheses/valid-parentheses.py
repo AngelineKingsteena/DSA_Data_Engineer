@@ -2,6 +2,7 @@ class Solution:
     def isValid(self, s: str) -> bool:
         ##video solution--https://www.youtube.com/watch?v=WTzjTskDFMg&ab_channel=NeetCode
         stack = []
+        #{()}
         closeToOpen = { ")" : "(", "}" : "{", "]" : "[" }
         for c in s:
             if c in closeToOpen:
