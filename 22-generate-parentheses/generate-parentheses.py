@@ -1,10 +1,9 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        ## video solution :- https://www.youtube.com/watch?v=iu0082c4HDE&ab_channel=NeetCode
+        ## video solution :- https://www.youtube.com/watch?v=s9fokUqJ76A
         # only add open paranthesis if open < n
         # only add a closing paranthesis if closed < open
-        # valid IIF open == closed ==
-        n
+        # valid IIF open == closed ==n
         stack = [ ]
         res = []
         def backtrack(openN, closedN):
