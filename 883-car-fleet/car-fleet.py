@@ -6,6 +6,7 @@ class Solution:
         for p, s in sorted(pair)[::-1]: # Reverse Sorted Order
             stack.append((target - p) / s)
             if len(stack) >= 2 and stack[-1] <= stack[-2]:
+                ### remove the lesser time car
                 stack.pop()
         return len(stack)
         
