@@ -7,6 +7,8 @@ class Solution:
             start = i
             while stack and stack[-1][1] > h:
                 index, height = stack.pop()
+                ## say in heights=[5,2]
+                ## at index 1,height 2 can extend even on left side to index 0,so we pop (0,5) and use 0 as index for height 2 in stack
                 maxArea = max(maxArea, height * (i - index))
                 start = index
             stack.append ((start, h))
