@@ -24,6 +24,13 @@ class Solution:
                     output = s[start:end]
                 if s[start] in lookup:
                     lookup[s[start]] += 1
+                    ## in "ADOBECODEBANC" if we need 1 count 
+                    ## of b and have 2 b's ,then
+                    ## count+=1 would have made -1 as 0, so as long 
+                    ## as we have enough just enough b's in o/p
+                    ## string (i.e lookup[s[start]]>0) then do
+                    ## count += 1,to move "end" to search in closer 
+                    ## vicinity of this extra b
                     if lookup[s[start]]>0:
                         count += 1
                 start+=1
