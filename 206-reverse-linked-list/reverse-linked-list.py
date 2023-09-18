@@ -15,3 +15,8 @@ class Solution:
             curr = nxt
         return prev
         
+# BEFORE(ACCORDING TO 1-->2-->NONE)
+# C-1,P-NONE,N-2
+
+# AFTER(ACCORDING TO NONE<--1<--2)
+# C-2,P-1,N-NONE
