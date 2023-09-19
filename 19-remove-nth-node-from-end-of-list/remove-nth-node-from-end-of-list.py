@@ -10,7 +10,7 @@ class Solution:
         ## idea:-
         # use 2 pointers,where right is 1st offset from left by n
         # and later both left and the offsetted right pointers 
-        # keep moving until right becomes null.
+        # keep moving 1step until right becomes null.
         # with dummy node at start,and the 
         #  movement cause by above l,r pointers ,
         # left will be exactly at node 3 (in eg 1 pic)
