@@ -9,27 +9,18 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
-        ## video solution :-https://www.youtube.com/watch?v=g7U-FPBR_gQ&ab_channel=TimothyHChang
-        dummy = Node(-1)
-        dummy.next = head
+        ## video solution :-https://www.youtube.com/watch?v=5Y2EiZST97Y&ab_channel=NeetCode
+        oldToCopy = { None:None }
         cur = head
-        #stage one, interweave
         while cur:
-            tmp = Node(cur.val)
-            tmp.next = cur.next
-            cur.next = tmp
-            cur = tmp.next
+            copy = Node(cur. val)
+            oldToCopy[cur] = copy
+            cur = cur .next
+            
         cur = head
-        #stage two, update random
         while cur:
-            if cur.random:
-                cur.next. random = cur. random. next
-            cur = cur.next.next
-        cur = dummy
-        old = head
-        #stage three, remove old nodes
-        while old:
-            cur.next = old.next
-            cur = old
-            old = cur. next
-        return dummy.next
+            copy = oldToCopy[cur]
+            copy.next = oldToCopy[cur .next]
+            copy.random = oldToCopy [cur. random]
+            cur = cur. next
+        return oldToCopy [head]
