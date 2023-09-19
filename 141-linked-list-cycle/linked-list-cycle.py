@@ -7,6 +7,8 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         # https://www.youtube.com/watch?v=gBTe7lFR3vc&ab_channel=NeetCode
+
+        # idea floyd algor or tortoise and hare algo
         slow, fast = head, head
         while fast and fast. next:
             slow = slow. next
