@@ -9,7 +9,7 @@ class Solution:
         # https://www.youtube.com/watch?v=gBTe7lFR3vc&ab_channel=NeetCode
 
         # idea floyd algor or tortoise and hare algo
-        slow, fast = head, head
+        slow, fast = head, head ## fast would've been head.next,if ques was to find middle
         while fast and fast. next:
             slow = slow. next
             fast = fast.next. next
