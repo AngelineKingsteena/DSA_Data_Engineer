@@ -11,22 +11,26 @@ class Solution:
         ######## recursive
         # if not root:
         #     return 0
+        # # Adding 1 is the current node which is the parent of the two subtrees...bcoz in a empty tree,height is 0,whereas in a tree 
+        ##with just 1 node height is 1
         # return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
-        ###### bfs or level order traversal
-        # if not root:
-        #     return 0
-        # level = 0
-        # q = deque ( [root ])
-        # while q:
-        #     for i in range (len (q)) :
-        #         node = q .popleft ()
-        #         if node. left:
-        #             q. append (node. left)
-        #         if node.right:
-        #             q.append (node. right)
-        #     level += 1
-        # return level
+
+
+        ##### bfs or level order traversal
+        if not root:
+            return 0
+        level = 0
+        q = deque ( [root ])
+        while q:
+            for i in range (len (q)) :
+                node = q .popleft ()
+                if node. left:
+                    q. append (node. left)
+                if node.right:
+                    q.append (node. right)
+            level += 1
+        return level
 
         ## DFS PREDORDER
 
