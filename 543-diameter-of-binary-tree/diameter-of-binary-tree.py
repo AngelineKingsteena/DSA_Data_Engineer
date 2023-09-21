@@ -12,12 +12,23 @@ class Solution:
 # Bottom-up DFS: from bottom to top,
 # find the longest path passing through a node and its descendants,
 # and updade the global longest path.
+
+## for a trial run of [1,2,3,4,5]
+## the recursion stack,goes to the botttommost left 4
+## when at node val 4,the return is 1,so at node val 2,
+## l_depth =1, and bcoz of node val 5, r_depth=1
         def depth(root):
             if not root:
                 return 0
             l_depth = depth(root.left)
             r_depth = depth(root.right)
+            ## diameter= depth(root.left) + depth(root.right)
             res[0] = max(res[0], l_depth + r_depth)
+            ##max depth
+            # # Adding 1 is the current node which is the 
+            # parent of the two subtrees...bcoz in a empty 
+            # tree,height is 0,whereas in a tree 
+            ##with just 1 node height is 1
             return 1 + max(l_depth, r_depth)
         
         res = [0]
