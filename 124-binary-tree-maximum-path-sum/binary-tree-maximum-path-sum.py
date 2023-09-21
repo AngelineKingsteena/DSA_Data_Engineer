@@ -14,6 +14,7 @@ class Solution:
                 return 0
             leftMax = dfs(root. left)
             rightMax = dfs(root.right)
+            ### to avoid negatives in path
             leftMax = max(leftMax, 0)
             rightMax = max(rightMax, 0)
             # compute max path sum WITH split
