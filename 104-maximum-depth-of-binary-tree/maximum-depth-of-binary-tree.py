@@ -13,6 +13,7 @@ class Solution:
         #     return 0
         # # Adding 1 is the current node which is the parent of the two subtrees...bcoz in a empty tree,height is 0,whereas in a tree 
         ##with just 1 node height is 1
+        ### This solution has a time complexity of O(n), where n is the number of nodes in the binary tree, since we visit each node exactly once. The space complexity is O(h), where h is the height of the binary tree, since the recursive call stack can have at most h frames.
         # return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 
 
