@@ -18,8 +18,8 @@ class Solution:
                 return False
             ## valid(node.left, left, node.val) = every values 
             # in the left subtree(node.left) has to be lesser 
-            # than parent(node.val) and greater than
-            #  max (oldest ancestor aka root , inf)
+            # than parent(node.val)[right limit] and greater than
+            #  max (oldest ancestor aka root , inf)[left limit]
             return (valid(node.left, left, node.val) and
             valid(node .right, node.val, right))
         return valid(root, float ("-inf"), float ("inf"))
