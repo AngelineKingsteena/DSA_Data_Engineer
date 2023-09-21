@@ -17,7 +17,7 @@ class Solution:
         root = TreeNode (preorder [0])
         mid = inorder.index(preorder [0])
         ### preorder[1:mid + 1] and not preorder[0:mid + 1] 
-        # since 0 is root
+        # since 0 is already taken as root
         root.left = self.buildTree(preorder[1:mid + 1], inorder[:mid])
         root.right = self.buildTree(preorder [mid + 1:], inorder [mid + 1:])
         return root
