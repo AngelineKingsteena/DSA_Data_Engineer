@@ -9,8 +9,8 @@ class Solution:
         ## video solution :-  https://www.youtube.com/watch?v=ihj4IQGZ2zc&ab_channel=NeetCode
 
         # PREorder traversal --> N,L,R (so first val is always root)
-        # inorder traversal --> L,N,R (from here we know the left and right subtree using
-        # root found from preorder)
+        # inorder traversal --> L,N,R (from here we know the 
+        # left and right subtree using root found from preorder)
 
         if not preorder or not inorder:
             return None
