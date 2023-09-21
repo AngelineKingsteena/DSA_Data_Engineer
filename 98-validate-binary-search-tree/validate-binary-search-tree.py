@@ -17,7 +17,8 @@ class Solution:
             if not (node.val < right and node.val > left):
                 return False
             ## valid(node.left, left, node.val) = every values in the left
-            #  subtree(node.left) has to be lesser than parent(right boundary)
+            #  subtree(node.left) has to be lesser than parent(node.val)
+            ## and greater than max (oldest ancestor aka root , inf)
             return (valid(node.left, left, node.val) and
             valid(node .right, node.val, right))
         return valid(root, float ("-inf"), float ("inf"))
