@@ -7,11 +7,7 @@
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         # https://docs.google.com/document/d/1l9UDlLZeP0mQxExqjepsKbgYQj4nrNGUsyDlKDA1jyg/edit?usp=sharing
-#         A path may or may not pass through the root.
-# All paths = {all paths passing through a node and its desendants | for each node in tree}.
-# Bottom-up DFS: from bottom to top,
-# find the longest path passing through a node and its descendants,
-# and updade the global longest path.
+# This solution has a time complexity of O(n), where n is the number of nodes in the binary tree, since we visit each node exactly once. The space complexity is O(h), where h is the height of the binary tree, since the recursive call stack can have at most h frames.
 
 ## for a trial run of [1,2,3,4,5]
 ## the recursion stack,goes to the botttommost left 4
