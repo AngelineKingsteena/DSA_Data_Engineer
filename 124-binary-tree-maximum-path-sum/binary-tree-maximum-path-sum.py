@@ -22,8 +22,9 @@ class Solution:
             return root. val + max(leftMax, rightMax)
         dfs(root)
         return res[0]
-
-    #     1
+ 
+ #### below is the explanation of max path sum WITHOUT/WITH split
+    #     1       max sum at 2 is just 2 itself
     #    / \
     #   2   3
     #      / \
@@ -33,7 +34,7 @@ class Solution:
     #                / \   so max path sum WITH split is 8
     #               4   5
 
-    # so total max path sum WITHOUT split will be  1+above computed 8
+    # so total max path sum WITHOUT split will be  1+above computed 8 =9
 
     #     1                            
     #      \
@@ -42,3 +43,4 @@ class Solution:
     #         5
 
         
+    # so total is 2+9=11
