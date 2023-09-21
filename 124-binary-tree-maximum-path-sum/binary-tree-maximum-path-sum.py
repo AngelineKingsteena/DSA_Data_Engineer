@@ -23,6 +23,11 @@ class Solution:
         dfs(root)
         return res[0]
  
+ ## for 1,right max is 2,leftmax is 8, got by return statement(compute max path sum WITHOUT split)
+ ## for 3,right max is 4,leftmax is 5,got by return statement(compute max path sum WITHOUT split)
+ ## so when at 3,res[0] becomes 12 (compute max path sum WITH split),post which max aka res[0] doesnt increase/change further
+
+
  #### below is the explanation of max path sum WITHOUT/WITH split
     #     1       max sum at 2 is just 2 itself
     #    / \
