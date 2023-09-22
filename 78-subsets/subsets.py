@@ -1,6 +1,8 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         ## video solution :- https://www.youtube.com/watch?v=REOH22Xwdkk&ab_channel=NeetCode
+        # T.C :- O(n.2^n),the 2^n is the no. of sub-sets posssible
+        # n is maximum digits one or more of the subsets can have
         res = []
         subset = [ ]
         def dfs(i):
