@@ -17,9 +17,9 @@ class Solution:
         return res
 
 # ############
-#         a              b
-#      /  |  \          ↗|
-#     /↟  |   ↟\       /  |      etc
-#    d ↟  e   ↟ f     /   d
-# [ad] ↟ [ae] ↟ [af] ⤴  [bd] 
+#       a                b
+#      /               ↗ |
+#     /               /  |      etc
+#    d  e     f      /   d
+# [ad]↗ [ae]↗ [af] ⤴  [bd] 
 #  ↪None ↪None   ↪None  ↪None     
