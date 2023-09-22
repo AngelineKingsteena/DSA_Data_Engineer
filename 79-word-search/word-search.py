@@ -1,6 +1,16 @@
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         ## video solution :- https://www.youtube.com/watch?v=pfiQ_PS1g8E&ab_channel=NeetCode
+
+        ## idea:-
+        # start looking for the starting letter of word in board,
+        # until then dfs,keeps returning false.
+        # if starting letter of word is found in board,then look in
+        # all four directions of it,concurrently updating i
+        # if if next letter is not found in the 4 directions,
+        # pop out the starting letter,maybe its the duplicate and has
+        # nothing to do with word
+
         ROWS, COLS = len (board), len(board[0])
         path = set ()
         def dfs(r, c, i):
