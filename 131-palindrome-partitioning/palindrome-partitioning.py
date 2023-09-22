@@ -29,3 +29,6 @@ class Solution:
     #      /  ↖
     #     b->None
     #  [a,a,b]
+
+    # basically create new func stack only if its palindrome,
+    # else return None and pop back from stack
