@@ -23,12 +23,12 @@ class Solution:
     #            /  aa -> aab->None
     #           / ↗ |  ↖
     #          a↗   b->None
-    #         /    [aa,b]
+    #         /    [aa,b] = sofar
     #        /  
     #       a ->ab->None   
     #      /  ↖
     #     b->None
-    #  [a,a,b]
+    #  [a,a,b] = sofar
 
     # basically create new func stack only if its palindrome,
     # else return None and pop back from stack
