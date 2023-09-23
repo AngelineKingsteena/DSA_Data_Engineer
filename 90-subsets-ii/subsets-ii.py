@@ -12,7 +12,7 @@ class Solution:
             backtrack(start + 1, tmp)
             tmp.pop()
             # Skip duplicates
-            while start < len(nums) - 1 and nums[start] == nums[start + 1]:
+            while start+1<len(nums) and nums[start]==nums[start+1]:
                 start += 1
             # Exclude the current element
             backtrack(start + 1, tmp)
