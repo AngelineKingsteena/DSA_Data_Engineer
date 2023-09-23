@@ -11,6 +11,15 @@ class Solution:
                 return
             # Include the current candidate
             cur.append(candidates[i])
+            # ### WITH dfs(i, cur, total + candidates[i])
+            # candidates =[10,1,2,7,6,1,5]
+            # target =8
+            # Output
+            # [[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,2],[1,1,1,1,2,2],
+            # [1,1,1,5],[1,1,2,2,2],[1,1,6],[1,2,5],[1,7],[2,2,2,2],
+            # [2,6]]
+            # Expected
+            # [[1,1,6],[1,2,5],[1,7],[2,6]]
             dfs(i+1, cur, total + candidates[i])
             cur.pop()
             # Skip duplicates
