@@ -1,5 +1,8 @@
 class Solution:
     def minCostClimbingStairs(self, c: List[int]) -> int:
+        ### in exampple [10,15,20]
+        # [10,15,20,0]
+        # [min(25,30),min(15,35),20,0]
         cost=c.copy()
         cost.append(0)
         for i in range(len (cost) - 3, -1, -1):
