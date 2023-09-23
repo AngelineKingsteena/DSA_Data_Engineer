@@ -7,7 +7,7 @@ class Solution:
         # until then dfs,keeps returning false.
         # if starting letter of word is found in board,then look in
         # all four directions of it,concurrently updating i
-        # if if next letter is not found in the 4 directions,
+        # if next letter is not found in the 4 directions,
         # pop out the starting letter,maybe its the duplicate and has
         # nothing to do with word
 
