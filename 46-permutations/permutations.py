@@ -14,4 +14,24 @@ class Solution:
                 visited.add(i)
                 self.backtracking(res,visited,subset+[nums[i]],nums)
                 visited.remove(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
         
