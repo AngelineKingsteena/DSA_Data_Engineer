@@ -1,5 +1,6 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
+        ##nums[0] for case like nums =[1]
         return max(nums[0],self.helper(nums[:-1]),self.helper(nums[1:]))
 
     def helper(self,nums: List[int]) -> int:
