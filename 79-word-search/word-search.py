@@ -30,7 +30,8 @@ class Solution:
             return res
         for r in range(ROWS) :
             for c in range (COLS):
-                if dfs(r, c, 0): return True
+                if dfs(r, c, 0):
+                    return True
         return False
         # 0(n * m * 4^n)
                 
