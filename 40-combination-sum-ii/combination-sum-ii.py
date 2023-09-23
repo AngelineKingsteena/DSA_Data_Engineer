@@ -11,7 +11,7 @@ class Solution:
                 return
             # Include the current candidate
             cur.append(candidates[i])
-            dfs(i + 1, cur, total + candidates[i])
+            dfs(i+1, cur, total + candidates[i])
             cur.pop()
             # Skip duplicates
             while i + 1 < len(candidates) and candidates[i] == candidates[i + 1]:
