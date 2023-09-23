@@ -4,6 +4,8 @@ class Solution:
 
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        ans = []
+        nums.sort()  # Sort the input list to handle duplicates
         def backtrack(start, tmp):
             ans.append(tmp[:])
             for i in range(start, len(nums)):
@@ -13,8 +15,5 @@ class Solution:
                 tmp.append(nums[i])
                 backtrack(i + 1, tmp)
                 tmp.pop()
-        
-        ans = []
-        nums.sort()  # Sort the input list to handle duplicates
         backtrack(0, [])
         return ans
