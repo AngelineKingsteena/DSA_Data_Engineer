@@ -8,6 +8,8 @@ class Solution:
 				right += 1				
 			return s[left + 1 : right]
 		for index in range(len(s)):
+			###max(odd,even,res)
+			###key=len says use len function on output/arguments
 			res = max(helper(index, index), helper(index, index + 1), res, key = len)
 		return res
         
