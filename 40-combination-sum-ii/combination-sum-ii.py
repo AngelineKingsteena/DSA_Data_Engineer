@@ -11,6 +11,7 @@ class Solution:
                     continue  # Skip duplicates to avoid duplicates in the result
                 if total + candidates[j] <= target:
                     cur.append(candidates[j])
+                    # Use j + 1 to avoid reusing the same number
                     dfs(j+1, cur, total + candidates[j])
                     cur.pop()
         dfs(0, [], 0)
