@@ -28,4 +28,26 @@ class Solution:
                 if 10 <= x <= 26:
                     dp[i] += dp[i - 2]
         return dp[n]
+
+
+# Let's consider some examples to see how this works:
+
+# Input: "12"
+
+# dp[0] = 1 (base case)
+# dp[1] = dp[0] = 1 (considering '1' by itself)
+# dp[2] = dp[1] + dp[0] = 1 + 1 = 2 (considering '2' by itself and '12' as a pair)
+# So, there are 2 ways to decode "12" as "AB" or "L".
+# Input: "226"
+
+# dp[0] = 1
+# dp[1] = dp[0] = 1
+# dp[2] = dp[1] + dp[0] = 1 + 1 = 2 (considering '2' by itself and '22' as a pair)
+# dp[3] = dp[2] + dp[1] = 2 + 1 = 3 (considering '6' by itself and '26' as a pair)
+# So, there are 3 ways to decode "226" as "BZ", "VF", or "BBF".
+# Input: "06"
+
+# dp[0] = 1
+# dp[1] = 0 (because '0' cannot be mapped to a letter)
+# Since the second digit is '6', we cannot consider it along with the '0' due to the leading '0'. So, there are 0 ways to decode "06".
         
