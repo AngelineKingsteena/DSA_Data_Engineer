@@ -27,7 +27,7 @@ class Solution:
                 # check the range
                 if 10 <= x <= 26:
                     dp[i] += dp[i - 2]
-        return dp[n]
+        return dp[-1]
 
 
 # Let's consider some examples to see how this works:
