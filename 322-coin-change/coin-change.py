@@ -1,5 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        #https://www.youtube.com/watch?v=H9bfqozjoqs&ab_channel=NeetCode
         dp = [amount + 1] * (amount + 1)
         dp [0] = 0 ## 0 WAYS TO MAKE AMOUNT 0
         for a in range (1, amount + 1):
