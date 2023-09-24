@@ -14,7 +14,7 @@ class Solution:
 
 # Iterate over each index i from 1 to len(s) + 1 (outer loop):
 
-# For each index i, iterate over each word w in wordDict (inner loop):
+# For each index i,iterate over each word w in wordDict (inner loop):
 # Check if the current word w can be appended to the substring ending at index i - len(w).
 # This is done by verifying three conditions:
 # i - len(w) >= 0: This ensures that the current word can be fit within the current index i.
