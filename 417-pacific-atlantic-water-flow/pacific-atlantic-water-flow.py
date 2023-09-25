@@ -1,6 +1,11 @@
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         # https://www.youtube.com/watch?v=s-VkcjHqkGI&ab_channel=NeetCode
+        # T.C : O(m*n)
+        # idea:- start from extremeties like top row and left column for pacific
+        # and bottom row and right column for atlantic and keep marking these cell in visited
+        # set i.e pac and atl...if the same cell is in both pac and atl return it as result
+
         ROWS, COLS = len (heights), len(heights[0])
         pac, atl = set(), set()
         def dfs(r, c, visit, prevHeight):
