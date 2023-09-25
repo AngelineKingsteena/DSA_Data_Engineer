@@ -16,16 +16,19 @@ class Solution:
             # our need is heights [r][c] > prevHeight
                 return
             visit.add((r, c))
+            ###keep visiting nearby valid cells,from the current valid cell
             dfs(r + 1, c, visit, heights[r][c])
             dfs(r - 1, c, visit, heights[r][c])
             dfs(r, c + 1, visit, heights[r][c])
             dfs(r, c - 1, visit, heights[r][c])
 
         for c in range(COLS) :
+            #top row for pacific and bottom row for atlantic
             dfs(0, c, pac, heights [0][c])
             dfs (ROWS - 1, c, atl, heights [ROWS - 1][c])
 
         for r in range(ROWS) :
+            # left column for pacific & right column for atlantic
             dfs(r, 0, pac, heights[r][0])
             dfs(r, COLS - 1, atl, heights[r][c])
 
