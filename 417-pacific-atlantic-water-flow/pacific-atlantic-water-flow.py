@@ -12,6 +12,8 @@ class Solution:
             if ((r, c) in visit or
             r < 0 or c < 0 or r == ROWS or c == COLS or
             heights [r][c] < prevHeight):
+            #heights [r][c] < prevHeight coz we are moving from out to in,
+            # our need is heights [r][c] > prevHeight
                 return
             visit.add((r, c))
             dfs(r + 1, c, visit, heights[r][c])
