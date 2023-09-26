@@ -1,4 +1,13 @@
 class Solution:
+# in example 2
+#     The code starts by iterating through the grid and encounters the first '1' at (0, 0).
+# It initiates a DFS traversal from (0, 0) and explores all connected land cells, marking them as visited and adding them to the stack.
+# The traversal covers the first island.
+# It increments the count to 1.
+# The code then continues to iterate through the grid and encounters another '1' at (2, 2).
+# It initiates a DFS traversal from (2, 2) and explores all connected land cells, marking them as visited and adding them to the stack.
+# The traversal covers the second island.
+# It increments the count to 2.
     def numIslands(self, grid: List[List[str]]) -> int:
         # The problem can be solved with DFS. Time complexity: O(height * width), space complexity: O(height * width).
         """
