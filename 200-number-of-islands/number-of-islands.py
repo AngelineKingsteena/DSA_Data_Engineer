@@ -30,6 +30,7 @@ class Solution:
                         u = stack.pop()
                         visit.add(u)
                         h, w = u[0], u[1]
+                        ## check in the adjacent places to the(h,w)
                         if h > 0 and grid[h-1][w] == '1' and (h-1,w) not in visit:
                             stack.append((h-1,w))
                         if h < height - 1 and grid[h+1][w] == '1' and (h+1,w) not in visit:
