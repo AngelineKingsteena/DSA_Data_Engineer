@@ -8,6 +8,7 @@ class Solution:
             ### important memoisation if block
             if (i, total) in dp:
                 return dp[(i, total)]
+            ## + is to count both the ways where we add the current element and the ways where we subtract it from the total. We are interested in all possible combinations of using + and - signs in front of each element in the nums array to reach the target sum.
             dp[(i, total)] = (backtrack(i + 1, total + nums[i])+
             backtrack(i + 1, total - nums[i]))
             return dp[ (i, total)]
