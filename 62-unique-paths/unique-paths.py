@@ -6,6 +6,7 @@ class Solution:
         # 28,21,15,10,6,3,1
         #  7, 6, 5, 4,3,2,1 (2=right+down ,3=right+down)
         #  1, 1, 1, 1,1,1,1
+        # start location is 1,end is 28
 
         #act as last row
         row = [1] * n
