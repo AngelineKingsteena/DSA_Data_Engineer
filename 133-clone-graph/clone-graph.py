@@ -23,4 +23,24 @@ class Solution:
             return copy
         return clone_recursive(node) if node else None
 
+# def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+#         if not node:
+#             return None
+#         oldToNew = {}
+#         queue=[node]
+
+#         copy=Node(node.val)
+#         oldToNew[node]=copy
+
+#         while queue:
+#             current= queue.pop(0)
+#             for nei in current.neighbors:
+#                 if nei not in oldToNew:
+#                     n=Node(nei.val)
+#                     oldToNew[nei]=n
+#                     queue.append(nei)
+#                 oldToNew[current].neighbors.append(oldToNew[nei])
+        
+#         return copy
+
         
