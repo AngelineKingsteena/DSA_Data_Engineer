@@ -14,6 +14,8 @@ class Solution:
             or board[r][c] != "O"):
                 return
             board[r][c] = "T"
+            ### in [["O","O","O"],["O","0","O"],["O","O","O"]],
+            ## to make O->T in the center,also
             capture(r + 1, c)
             capture(r-1,c)
             capture(r,c+1)
