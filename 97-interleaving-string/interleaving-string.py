@@ -1,5 +1,5 @@
 class Solution:
-    # https://leetcode.com/problems/interleaving-string/solutions/3956393/99-78-2-approaches-dp-recursion/
+    # https://www.youtube.com/watch?v=3Rw3p9LrgvE&ab_channel=NeetCode
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
         if len(s1) + len(s2) != len(s3):
             return False
