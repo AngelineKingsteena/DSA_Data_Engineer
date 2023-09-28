@@ -7,10 +7,13 @@ class Solution:
         i = len(digits)-1
         digits[i] += 1
         while digits[i]==10:
+            ##remove the carry
             digits[i] = 0
+            ## for i/p [9]
             if i==0:
                 digits.insert(0,1)
             else:
+                ##add the removed carry
                 digits[i-1] += 1
                 i -= 1
         return digits
