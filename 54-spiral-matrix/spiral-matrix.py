@@ -1,5 +1,9 @@
 class Solution:
     def spiralOrder(self, A: List[List[int]]) -> List[int]:
+        # The time complexity of the code is O(m * n), where:
+# m is the number of rows in the input matrix A.
+# n is the number of columns in the input matrix A.
+        # The space complexity of the code is O(m * n), which is the space required for the ans list to store the output.
         row=len(A)
         ans=[]
         if ((row==0) or (A==None)):
