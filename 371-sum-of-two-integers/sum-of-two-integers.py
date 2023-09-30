@@ -30,7 +30,7 @@ class Solution:
         # 32 bit mask in hexadecimal
          # (python default int size is not 32bit, it is very large number, so to prevent overflow and stop running into infinite loop, we use 32bit mask to limit int size to 32bit )
     def getSum(self, a: int, b: int) -> int:
-        mask = 0xffffffff
+        mask = 0xffffffff #8f
         while(b & mask > 0):
             # carry = (a & b) << 1
             # a = a ^ b
