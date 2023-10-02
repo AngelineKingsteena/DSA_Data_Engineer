@@ -2,6 +2,12 @@ class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         # https://www.youtube.com/watch?v=IlEsdxuD4lY&ab_channel=NeetCode
 
+        #logic:-no.of ways to start from finish and end in finsih=1
+    # no.of ways to reach any cell in bottom and extreme right=adjacent right+adjacent down
+    ## for bottom cells,adjacent down=0,adjacent right=1
+    ## for extreme right cells,adjacent down=1,adjacent right=0
+    ## that is why last row ,last column is fully 1
+
 # idea:- replicate below (notice last row ,last column is fully 1)
         # 28,21,15,10,6,3,1
         #  7, 6, 5, 4,3,2,1 (2=right+down ,3=right+down)
