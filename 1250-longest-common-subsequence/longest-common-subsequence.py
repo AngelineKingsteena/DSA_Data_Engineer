@@ -27,7 +27,7 @@ class Solution:
             for j in range(len (text2) - 1, -1, -1):
                 if text1[i] == text2[j]:
                     ## diagonal--since this pair is matching,we can move diagonal to next pair of letters
-                    dp[i][j] = 1 + dp[i + 1][j + 1]
+                    dp[i][j] = 1 + dp[i + 1][j + 1] #(1+dia,coz first dia is always 0)
                 else:
                     ## max(right,bottom)
                     dp[i][j] = max(dp[i][j + 1], dp[i + 1][j])
