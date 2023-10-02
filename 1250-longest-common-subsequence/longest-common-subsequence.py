@@ -26,7 +26,7 @@ class Solution:
         for i in range(len(text1) - 1, -1, -1):
             for j in range(len (text2) - 1, -1, -1):
                 if text1[i] == text2[j]:
-                    ## diagonal
+                    ## diagonal--since this pair is matching,we can move diagonal to next pair of letters
                     dp[i][j] = 1 + dp[i + 1][j + 1]
                 else:
                     ## max(right,bottom)
