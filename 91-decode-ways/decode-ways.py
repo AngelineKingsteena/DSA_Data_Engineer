@@ -13,14 +13,14 @@ class Solution:
             # check single digit decode
             # valid deocde is possible only when s[i - 1] is not zero
             # if so, take the previous state dp[i - 1]
-            # e.g. AB - 1[2]
+            # e.g. 1[2]--can be decoded as A,B
             if s[i - 1] != '0':
                 dp[i] = dp[i - 1]
             # check double digit decode
             # by looking at the previous two digits
             # if the substring belongs to the range [10 - 26]
             # then add the previous state dp[i - 2]
-            # e.g. L - [12]
+            # e.g.[12]--can be decoded as L
             if i >= 2:
                 # or you can use `stoi(s.substr(i - 2, 2))`
                 x = int(s[i - 2: i])
