@@ -11,7 +11,6 @@ class Solution:
 # | does a union between these two sets.
     def canPartition(self, nums: List[int]) -> bool:
         #it's always possible to create an empty subset with a sum of 0.
-        # Initialize a set 'possible_sums' with 0 to represent an empty subset with a sum of 0.
         possible_sums = {0}
         # Iterate through each 'num' in the input list 'nums'.
         for num in nums:
