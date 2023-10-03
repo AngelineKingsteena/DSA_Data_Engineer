@@ -9,8 +9,9 @@ class Solution:
          #two is no. of steps to reach top from top before step
         ## skip last two
         for i in range(n - 1):
-            temp = one
-            one = one + two
-            two = temp
+            # temp = one
+            # one = one + two
+            # two = temp
+            one,two=one + two,one
         return one
         
