@@ -1,9 +1,10 @@
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        dp = [1]*len(nums)
+        dp = [1]*len(nums) #dp[3] would be 1 because the longest sub starting from the end of the array would be 1
         for i in range(len(nums)-1,-1,-1):
             for j in range(i+1,len(nums)):
                 if nums[i]<nums[j]:
+                    #1+dp[3] because then we have to include the last element too.
                     dp[i] = max(dp[i],1+dp[j])
         return max(dp)      
 
