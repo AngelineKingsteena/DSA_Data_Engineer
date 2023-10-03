@@ -7,7 +7,6 @@ class Solution:
         dp [0] = 0 ## 0 WAYS TO MAKE AMOUNT 0
         for c in coins:
             for a in range (1, amount + 1):
-            
                 if a - c >= 0:## IF IT ENDS UP NEGATIVE,NO SOLUTION
                     dp[a] = min(dp[a], 1 + dp[a - c])
                     # COIN=4
@@ -15,4 +14,26 @@ class Solution:
                     # DP[7]=1+DP[7-4]
         # return non-default values
         return dp [amount] if dp [amount] != amount + 1 else -1
+
+# idea:-
+# coins = [1,2,5], amount = 5
+
+# Initialize dp as [0, 6, 6, 6, 6, 6] (size= amount + 1).
+## each element in dp represents an no.of ways to make index amount 
+# [N for re.0,N for rs.1,N for rs.2..etc]..where N=min coins requeuired...
+
+# For each coin denomination (1, 2, and 5):
+# When considering the coin with value 1, update dp from left to right:
+# dp[1]: dp becomes [0, 1, 0, 0, 0, 0]
+# dp[2]: dp becomes [0, 1, 2, 0, 0, 0]
+# ...
+# dp[5]: dp becomes [0, 1, 2, 3, 4, 5]##no of ways 1re is used  
+# When considering the coin with value 2, update dp from left to right:
+# dp[2]: dp becomes [0, 1, 1, 3, 4, 5]
+# dp[3]: dp becomes [0, 1, 1, 2, 4, 5]
+# ...
+# dp[5]: dp becomes [0, 1, 1, 2, 2, 3]##no of ways both 1rs and 2rs is used  
+# When considering the coin with value 5, update dp from left to right:
+# dp[5]: dp becomes [0, 1, 1, 2, 2, 1]##no of ways all 1rs,2rs,5rs are used  
+# The final result is dp[5], which is 1. This means min coins requeuired to make up 5 using the coins [1, 2, 5] is 1
         
