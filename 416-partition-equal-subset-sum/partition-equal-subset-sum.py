@@ -21,7 +21,6 @@ class Solution:
             added_sums = {sum + num for sum in possible_sums}
             # Combine the two sets using union (|) to update 'possible_sums' with new sums.
             possible_sums = subtracted_sums | added_sums
-        # Check if 0 is in 'possible_sums', which means it's possible to partition the list into
-        # two subsets with equal sums.
+        # Check if 0 is in 'possible_sums', which means it's possible to partition the list into two subsets with equal sums.
         return 0 in possible_sums
             
