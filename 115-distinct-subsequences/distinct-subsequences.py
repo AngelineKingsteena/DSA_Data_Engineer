@@ -1,6 +1,7 @@
 class Solution:
     def numDistinct(self, s: str, t: str) -> int:
 # https://www.youtube.com/watch?v=-RDzMJ33nx8&ab_channel=NeetCode
+##i=index of s, j=index of t
         cache = {}
         def dfs(i, j):
             if j == len(t):
