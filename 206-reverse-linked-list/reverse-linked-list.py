@@ -9,10 +9,11 @@ class Solution:
         prev, curr = None, head
         # T O(n) M 0(1)
         while curr:
-            nxt = curr.next
-            curr.next = prev
-            prev = curr
-            curr = nxt
+            # nxt = curr.next
+            # curr.next = prev
+            # prev = curr
+            # curr = nxt
+            curr.next, prev, curr = prev, curr, curr.next
         return prev
         
 # BEFORE(ACCORDING TO 1-->2-->NONE)
