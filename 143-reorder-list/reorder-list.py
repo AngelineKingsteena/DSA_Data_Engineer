@@ -27,7 +27,9 @@ class Solution:
         first, second = head, prev
         while second:
             tmp1, tmp2 = first.next, second. next
+            #reorder
             first.next = second
             second. next = tmp1
+            #iterate
             first, second = tmp1, tmp2
                 
