@@ -9,13 +9,13 @@
 
         ## EXAMPLE ##
         Adding number 41
-        MaxHeap lo: [41]           // MaxHeap stores the largest value at the top (index 0)
-        MinHeap hi: []             // MinHeap stores the smallest value at the top (index 0)
+        MaxHeap lo: [41]// MaxHeap stores the largest value at the top (index 0)
+        MinHeap hi: []// MinHeap stores the smallest value at the top (index 0)
         Median is 41
         =======================
         Adding number 35
-        MaxHeap lo: [35]          // max heap stores smaller half of nums
-        MinHeap hi: [41]          // min heap stores bigger half of nums
+        MaxHeap lo: [35] // max heap stores smaller half of nums
+        MinHeap hi: [41] // min heap stores bigger half of nums
         Median is 38
         =======================
         Adding number 62
