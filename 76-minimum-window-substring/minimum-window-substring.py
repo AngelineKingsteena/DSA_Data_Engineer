@@ -2,7 +2,7 @@ class Solution:
     def minWindow(self, s: str, t: str) -> str:
         ## video solution :-https://www.youtube.com/watch?v=CX6_L9GLldU&ab_channel=TimothyHChang
         lookup = Counter(t)
-        mx = float("inf")
+        miN = float("inf")
         output = ""
         S=len(s)
         start,end = 0,0
@@ -19,8 +19,8 @@ class Solution:
                 end+=1
             #start pointer
             while start<end and count == 0:
-                if end-start < mx:
-                    mx = end-start
+                if end-start < miN:
+                    miN = end-start
                     output = s[start:end]
                 if s[start] in lookup:
                     lookup[s[start]] += 1
