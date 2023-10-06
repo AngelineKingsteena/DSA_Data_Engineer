@@ -12,7 +12,7 @@ class Solution:
                 # | /|      in [4,5,6,7,0,1,2] (right has the min)
                 # |/ | / 
                 #    |/
-            if nums[mid] >= nums[l]:
+            if nums[l] <= nums[mid]:
                 # Minimum is in the right sorted portion
                 l = mid + 1
             # if not sorted,min might be on the other side i,.e right side
