@@ -9,6 +9,7 @@ class Solution:
             for p in piles:
                 #time=event/speed
                 hours += math.ceil(p / k)
+            # similar check in https://leetcode.com/problems/time-based-key-value-store/
             if hours <= h: #(both < and ==,so no elif)
                 res = min(res, k)
                 r= k - 1
