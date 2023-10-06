@@ -1,6 +1,15 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
         ## video solution :-https://www.youtube.com/watch?v=CX6_L9GLldU&ab_channel=TimothyHChang
+
+        """
+        Intuition:
+
+We maintain two pointers, start and end, to represent a window in the string s.
+Initially, we move the end pointer to the right, expanding the window, until we include all the characters from string t in the window.
+Then, we move the start pointer to the right, shrinking the window while still maintaining the requirement of having all characters from t. This helps us find the minimum window size that satisfies the condition.
+We keep track of the minimum window size and its corresponding substring as we iterate through the entire string s.
+        """
         lookup = Counter(t)
         miN = float("inf")
         output = ""
