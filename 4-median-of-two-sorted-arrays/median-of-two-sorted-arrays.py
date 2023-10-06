@@ -10,6 +10,7 @@ class Solution:
         l, r = 0, len(A) - 1
         while True:
             i = (l + r) // 2 # A # uptil i is left partition of a
+            ##-2 BCOZ HALF-I WILL CONSIDER INDICES,BUT WE WANT HALF OF NO. OF ELEMENTS RATHER THAN INDICES,2 BECOZ J STARTS AT 0,I STARTS AT 0
             j= half - i - 2 # B # uptil j is left partition of b
             Aleft = A[i] if i >= 0 else float("-infinity")
             Aright = A[i + 1] if (i + 1) < len(A) else float("infinity")
