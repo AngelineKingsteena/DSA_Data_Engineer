@@ -15,6 +15,7 @@ class TimeMap:
         l, r = 0, len (values) - 1
         while l <= r:
             m = (l + r) // 2
+            # similar check in https://leetcode.com/problems/koko-eating-bananas/description/
             if values [m][1] <= timestamp:
                 res = values [m][0]
                 l = m + 1
