@@ -19,5 +19,3 @@ class Solution:
             else:
                 # Minimum is in the left sorted portion
                 r = mid    
-        # The loop should always find the minimum, so this line is unlikely to be executed.
-        return -1
