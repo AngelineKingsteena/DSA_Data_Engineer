@@ -9,7 +9,7 @@ class Solution:
                 # it means the array is already sorted, and the minimum is at the 'left' index.
                 return nums[left]
 
-            mid = left + (right - left) // 2
+            mid =( left + right) // 2
 
             if nums[mid] > nums[right]:
                 left = mid + 1
