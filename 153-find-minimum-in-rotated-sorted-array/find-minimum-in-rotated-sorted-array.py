@@ -4,15 +4,19 @@ class Solution:
         res = nums [0]
         l, r = 0, len (nums) - 1
         while l <= r:
-            # if already in proper ascending order,obviously the leftmost is the minimum,
-            # so we can break out of algo,no need to even do binary search
+            # if already in proper ascending order,obviously the leftmost is the minimum,so we can break out of algo
             if nums [l] < nums[r]:
                 res = min(res, nums [l])
                 break
             m = (l + r) // 2
             res = min(res, nums [m])
+            #  checks whether the subarray from l to m is sorted,then right might have min,cause
+            # | /|      in [4,5,6,7,0,1,2] (right has the min)
+            # |/ | / 
+            #    |/
             if nums [l] <= nums [m]:
                 l = m + 1
+            # if not sorted,min might be on the other side i,.e right side
             else:
                 r = m - 1
         return res
