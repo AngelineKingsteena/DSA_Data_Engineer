@@ -9,6 +9,7 @@ class Solution:
                 res = min(res, nums [l])
                 break
             m = (l + r) // 2
+            ## example in [3,1,2],first iteration,l=0,r=2,nums [m]=1,end of iteration nums [m]=3
             res = min(res, nums [m])
             #  checks whether the subarray from l to m is sorted,then right might have min,cause
             # | /|      in [4,5,6,7,0,1,2] (right has the min)
