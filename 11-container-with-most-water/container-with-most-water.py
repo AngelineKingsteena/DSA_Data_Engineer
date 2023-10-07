@@ -7,6 +7,7 @@ class Solution:
         while l < r:
             area = (r - l) * min(height [l], height[r])
             res = max(res, area)
+            ### choose the max height to increase area
             if height[l] < height[r]:
                 l+= 1
             else:
