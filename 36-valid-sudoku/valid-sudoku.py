@@ -14,8 +14,8 @@ This will require a single traversal. The same box condition can be checked usin
                             # condition in english:-
                             # check if its in same x-axis or y-axis or
                             # (comes within the 3*3 box)
-                            # pos is old position of char,(x,y) will become
-                            # new position of char if they pass below
+                            # pos is old position of char,(x,y) will appended
+                            # as new position of char if they pass below
                             # condition
                             if (pos[0]== x) or (pos[1] == y) \
                             or (pos[0]//3 == x//3 and pos[1]//3 == y//3):
