@@ -15,7 +15,7 @@ class Solution:
         for ind,value in enumerate(numbers):
             rem=target-value
             if rem in seen:
-                return [min(ind,numbers.index(rem))+1,max(ind,seen[rem])+1]
+                return [min(ind,seen[rem])+1,max(ind,seen[rem])+1]
             seen[value]=ind
         return []
             
