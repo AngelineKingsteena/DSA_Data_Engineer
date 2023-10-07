@@ -3,7 +3,9 @@ class Solution:
         ## video solution :- https://www.youtube.com/watch?v=zx5Sw9130L0&ab_channel=NeetCode
         maxArea = 0
         stack = [] # pair: (index, height)
-        for i, h in enumerate(heights):
+##It's for handling when the last item isn't included into the stack yet.
+# Like the test case [2,4]. Without making it into a [2,4,-1], you would have to make a special case to ensure that 4 is processed, but if you added the last dummy element, then 2 and 4 will always be included in the stack and taken into account when calculating areas.
+        for i, h in enumerate(heights+[-1]):
             start = i
             while stack and stack[-1][1] > h:
                 index, height = stack.pop()
@@ -12,7 +14,5 @@ class Solution:
                 maxArea = max(maxArea, height * (i - index))
                 start = index
             stack.append ((start, h))
-        for i, h in stack:
-            maxArea = max(maxArea, h * (len (heights) - i))
         return maxArea
         
