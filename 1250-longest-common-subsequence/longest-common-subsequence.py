@@ -1,7 +1,7 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         # https://www.youtube.com/watch?v=Ua0GhsJSlWM&ab_channel=NeetCode
-
+        # T.C & S.C : O (len(str1)*len(str2))
         ##idea:-
         # create a 2 d matrix of text1 & text2 with extra row and extra column and if the letters match,then add 1 with diigonal value,else move  right or botom and take max of either
 
