@@ -6,7 +6,7 @@
         
 		## TIME COMPLEXITY : O(logN) ##
 		## SPACE COMPLEXITY : O(N) ##
-
+BETTER TO UNDERSTAND IF lo is understood as left side and hi as right side 
         ## EXAMPLE ##
         Adding number 41
         MaxHeap lo: [41]// MaxHeap stores the largest value at the top (index 0)
