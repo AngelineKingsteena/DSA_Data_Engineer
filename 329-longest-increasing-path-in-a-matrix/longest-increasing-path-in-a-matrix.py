@@ -10,6 +10,19 @@ class Solution:
                 return 0
             if (r, c) in dp:
                 return dp[(r, c)]
+            """
+            max becoz in input
+            9,9,4
+            6,6,8
+            2,1,1
+            the dfs lip matrix looks like below, wherein each element 
+            indicates lip from itself that's 1+x
+            1,1,2
+            2,2,1
+            3,4,2
+            the last middle one in i/p can go up or right
+            max(up (1+2), right(1+3))
+            """
             res = 1
             res = max(res, 1 + dfs(r+1,c,matrix[r][c]))
             res = max(res, 1 + dfs(r-1,c,matrix[r][c]))
