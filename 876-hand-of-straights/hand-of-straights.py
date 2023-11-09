@@ -20,8 +20,6 @@ class Solution:
                     return False
                 count[i] -= 1
                 if count [i] == 0:
-                    if i != minH[0]:
-                        return False
                     heapq. heappop (minH)
         return True
                 
