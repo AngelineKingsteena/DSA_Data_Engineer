@@ -4,7 +4,7 @@ class Solution:
         # T.C :- Nlog(N)
         if len(hand) % groupSize:
             return False
-
+        # counter can also be used
         count = {}
         for n in hand:
             count [n] = 1 + count.get (n, 0)
@@ -14,7 +14,9 @@ class Solution:
         while minH:
             first = minH[0]
             for i in range(first, first + groupSize):
+                # in eg counter {1:1,3:1} first=1
                 if i not in count:
+                    ,#so when i =2
                     return False
                 count[i] -= 1
                 if count [i] == 0:
