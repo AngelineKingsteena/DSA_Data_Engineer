@@ -1,6 +1,7 @@
 class Solution:
     def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
         # https://www.youtube.com/watch?v=amnrMCVd2YI&ab_channel=NeetCode
+        # T.C :- Nlog(N)
         if len(hand) % groupSize:
             return False
 
