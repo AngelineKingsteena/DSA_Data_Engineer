@@ -1,5 +1,7 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
+        # SLIDE LEFT (EXPLANATION 10 MIN IN VIDEO)
+        #T.C :- O(n)
         ## video solution :- https://www.youtube.com/watch?v=gqXU1UyA8pk&ab_channel=NeetCode
         ### IDEA: we need to get longest repeating string,
         # so the logic we'll be using is :- length of sring sofar-max count of char/Count of repeating char sofar> k 
