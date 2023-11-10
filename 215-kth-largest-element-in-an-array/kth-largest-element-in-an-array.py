@@ -5,7 +5,7 @@
 # Extra Space Complexity: O(n)
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
-        # idea :- kth largest element is the first element in heap of size k
+        # idea :- kth largest element is the first element in minheap of size k
         heap = nums[:k]
         heapq.heapify(heap)
         
