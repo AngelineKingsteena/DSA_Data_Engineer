@@ -8,6 +8,7 @@ class KthLargest:
             heapq.heappop(self.minHeap)
     
     def add(self, val: int) -> int:
+        #kth largest is the lowest in minheap of length k
         heapq. heappush (self .minHeap, val)
         if len(self.minHeap) > self.k:
             heapq. heappop (self .minHeap)
