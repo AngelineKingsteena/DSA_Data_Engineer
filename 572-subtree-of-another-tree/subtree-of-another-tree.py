@@ -8,7 +8,7 @@ class Solution:
     def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
         if not t:
              return True
-        if not s: 
+        if not s: ## if not s and t
             return False
         if self.isSameTree(s, t) :
             return True
