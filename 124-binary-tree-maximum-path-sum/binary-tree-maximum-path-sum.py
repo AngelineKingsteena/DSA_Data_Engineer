@@ -7,7 +7,7 @@
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         ## video solution :- https://www.youtube.com/watch?v=Hr5cWUld4vU&ab_channel=NeetCode
-        res = [root.val]
+        res = [root.val] ## if tree has single node with value -13
         # return max path sum without split
         def dfs(root):
             if not root:
