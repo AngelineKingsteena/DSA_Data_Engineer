@@ -7,7 +7,7 @@ class Solution:
             first = heapq. heappop(stones)
             second = heapq. heappop (stones)
             if second > first:
-                heapq. heappush (stones, first - second)
-        stones.append(0)
+                heapq. heappush (stones, first - second) # if append (1) instead of (-1)
+        stones.append(0) ## finaly it'd be [-1,0]
         return abs(stones [0])   
         
