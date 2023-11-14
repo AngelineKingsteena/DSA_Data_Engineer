@@ -5,9 +5,11 @@ class Solution:
         maxP= 0
         while r < len (prices) :
             if prices [l] < prices[r]:
+                ##profit=selling price-cost price
                 profit = prices[r] - prices [l]
                 maxP = max (maxP, profit)
             else:
+                ## move to the identified large price's index
                 l =r
             r +=1
         return maxP
