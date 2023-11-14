@@ -9,7 +9,7 @@ class Solution:
             word,step=q.popleft()
             for i in range(len(beginWord)):
                 for j in range(26):
-                    new=word[:i]+chr(97+j)+word[i+1:]
+                    new=word[:i]+chr(97+j)+word[i+1:] ## or chr(ord('a')+j)
                     if new==endWord:
                         return step+1
                     if new in wordList:
