@@ -15,8 +15,7 @@ class Solution:
 # possible product can turn the current product into a greater value.
 # example:
 # [-1,-2,-3]
- ## in [-1,-2] min is -2,max 2
- ## in [-2,-3] min is -6,max 6
+ ## in [-1,-2] min is -2,max 2 but once we consider next value also i.e [-1,-2,-3] new_max=min*-3=6 giving a higher max
 # Time: O(n) - scan
 # Space: O(1)
         
