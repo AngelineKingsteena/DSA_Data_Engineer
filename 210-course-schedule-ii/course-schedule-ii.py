@@ -4,7 +4,6 @@ class Solution:
         prereq = { c: [] for c in range (numCourses) }
         for crs, pre in prerequisites:
             prereq[crs].append (pre)
-        
         output = []
         visit, cycle = set(), set()
         def dfs(crs):
@@ -15,15 +14,19 @@ class Solution:
 
             cycle.add(crs)
             for pre in prereq[crs]:
-                if dfs(pre) == False:
+                if not dfs(i):
                     return False
+                else:
+                    continue
             cycle.remove(crs)
             visit.add(crs)
             output.append(crs)
-            return True
+            return True ## important
 
         for c in range (numCourses) :
-            if dfs(c) == False:
-                return [ ]
+            if not dfs(i):
+                return []
+            else:
+                continue
         return output
                 
