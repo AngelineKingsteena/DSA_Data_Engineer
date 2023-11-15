@@ -24,12 +24,13 @@ class Solution:
             second = tmp
         
         # merge two halfs
-        first, second = head, prev
-        while second:
-            tmp1, tmp2 = first.next, second. next
+        first=head
+        sec=prev
+        while sec and first:
+            tmp1,tmp2=first.next,sec.next
             #reorder
-            first.next = second
-            second. next = tmp1
+            first.next=sec
+            sec.next=tmp1
             #iterate
-            first, second = tmp1, tmp2
+            first,sec=tmp1,tmp2
                 
