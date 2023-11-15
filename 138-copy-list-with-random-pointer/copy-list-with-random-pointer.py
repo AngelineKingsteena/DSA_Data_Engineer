@@ -10,7 +10,7 @@ class Node:
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         ## video solution :-https://www.youtube.com/watch?v=5Y2EiZST97Y&ab_channel=NeetCode
-        oldToCopy = { None:None }
+        oldToCopy = { None:None } # to handle null nodes
         cur = head
         while cur:
             copy = Node(cur. val)
