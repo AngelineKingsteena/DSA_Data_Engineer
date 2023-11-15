@@ -14,30 +14,23 @@ class Solution:
         :type grid: List[List[str]]
         :rtype: int
         """
-        # DFS
-        if len(grid) == 0:
-            return 0
-        count = 0
+        ROW, COL = len(grid), len(grid[0])
+        islands = 0
         visit = set()
-        height = len(grid)
-        width = len(grid[0])
-        for i in range(height):
-            for j in range(width):
-                if grid[i][j] == '1' and (i,j) not in visit:
-                    count += 1
-                    stack = [(i,j)]
-                    while stack:
-                        u = stack.pop()
-                        visit.add(u)
-                        h, w = u[0], u[1]
-                        ## check in the adjacent places to the(h,w)
-                        if h > 0 and grid[h-1][w] == '1' and (h-1,w) not in visit:
-                            stack.append((h-1,w))
-                        if h < height - 1 and grid[h+1][w] == '1' and (h+1,w) not in visit:
-                            stack.append((h+1,w))
-                        if w > 0 and grid[h][w-1] == '1' and (h,w-1) not in visit:
-                            stack.append((h,w-1))
-                        if w < width - 1 and grid[h][w+1] == '1' and (h,w+1) not in visit:
-                            stack.append((h,w+1))
-        return count
+
+        def dfs(r, c):
+            if r < 0 or c < 0 or r == ROW or c == COL or grid[r][c] != "1" or (r, c) in visit:
+                return
+            visit.add((r, c))
+            dfs(r + 1, c)
+            dfs(r - 1, c)
+            dfs(r, c + 1)
+            dfs(r, c - 1)
+
+        for i in range(ROW):
+            for j in range(COL):
+                if grid[i][j] == "1" and (i, j) not in visit:
+                    islands += 1
+                    dfs(i, j)
+        return islands
 
