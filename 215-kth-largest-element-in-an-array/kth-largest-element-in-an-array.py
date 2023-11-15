@@ -6,12 +6,8 @@
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         # idea :- kth largest element is the first element in minheap of size k
-        heap = nums[:k]
-        heapq.heapify(heap)
-        
-        for num in nums[k:]:
-            if num > heap[0]:
-                heapq.heappop(heap)
-                heapq.heappush(heap, num)
-        
-        return heap[0]
+        n=nums
+        heapq. heapify (n)
+        while len(n) > k:
+            heapq.heappop(n)
+        return n[0]
