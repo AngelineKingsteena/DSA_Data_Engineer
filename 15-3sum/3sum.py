@@ -4,6 +4,8 @@ class Solution:
         res = []
         nums.sort()
         for i, a in enumerate (nums):
+            ## to avoid duplicate solutions incase of [-4,-1,-1,0,1,2]
+            ## expected o/p:-[[-1,-1,2],[-1,0,1]] without if block:-[[-1,-1,2],[-1,0,1],[-1,0,1]] (caused by -1 val in indice 1&2)
             if i > 0 and a == nums[i - 1]:
                 continue
             l, r = i + 1, len(nums) - 1
@@ -16,6 +18,7 @@ class Solution:
                 else:
                     res.append ([a, nums [l], nums [r]])
                     l+=1
+                    ## to remove duplicates of current l
                     while nums [l] == nums [l - 1] and l < r:
                         l+=1
         return res
