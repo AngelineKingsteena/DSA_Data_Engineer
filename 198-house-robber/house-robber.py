@@ -7,6 +7,7 @@ class Solution:
         #dp (less space)
         a, b = nums[0], max(nums[0], nums[1])
         for i in range(2,len(nums)):
+            ## its a + nums[i] and not b + nums[i],cause alternative indices,eg:-a is at 0th index,i is at 2nd index
             a, b = b, max(a + nums[i], b)
         return b
         
