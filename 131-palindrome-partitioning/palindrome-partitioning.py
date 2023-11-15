@@ -11,7 +11,8 @@ class Solution:
                 output.append(sofar)
             for i in range(st,len(s)):
                 if s[st:i+1]==s[st:i+1][::-1]: #is palindrome?
-                    dfs(i+1, sofar+[s[st:i+1]])
+                    dfs(i+1, sofar+[s[st:i+1]]) #[["a","a","b"],["aa","b"]]
+                    #dfs(st+1, sofar+[s[st:i+1]]) #[["a","a","b"],["aa","a","b"]]
         dfs(0, [])
         return output
 
