@@ -4,14 +4,16 @@ class Solution:
         # T.C :O(n)
         if sum(gas) < sum(cost):
             return -1
-        total = 0
-        start= 0
-        for i in range(len (gas)):
-            total += (gas[i] - cost[i])
-            if total < 0:
-                total=0
-                start=i+1
-        return start
+        total_gas = 0
+        l= 0
+        for r in range(len (gas)):
+            ##cause gas is like profit in travelling ahead,cost is like loss and detrimental to travel
+            total_gas += (gas[r] - cost[r])
+            if total_gas < 0:
+                total_gas=0
+                ##at current r total became <0 ,so move one pointer ahead
+                l=r+1
+        return l
 
 
         
