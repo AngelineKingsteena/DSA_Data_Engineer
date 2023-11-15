@@ -10,7 +10,7 @@ from typing import Optional
 class Solution:
     def cloneGraph(self,node:Optional['Node'])->Optional['Node']:
 # https://www.youtube.com/watch?v=mQeF6bN8hMk&ab_channel=NeetCode
-        # t.c :- O(n)
+        # t.c :- O(n) n=edges+vertices
         oldToNew={}
         def clone_recursive(node):
             if node in oldToNew:
