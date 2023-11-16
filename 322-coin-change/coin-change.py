@@ -20,20 +20,20 @@ class Solution:
 
 # Initialize dp as [0, 6, 6, 6, 6, 6] (size= amount + 1).
 ## each element in dp represents an no.of coins required to make index amount 
-# [N for re.0,N for rs.1,N for rs.2..etc]..where N=min coins requeuired...
+# [N for re.0,N for rs.1,N for rs.2..etc]..where N=min coins required...
 
 # For each coin denomination (1, 2, and 5):
 # When considering the coin with value 1, update dp from left to right:
-# dp[1]: dp becomes [0, 1, 0, 0, 0, 0]
-# dp[2]: dp becomes [0, 1, 2, 0, 0, 0]
+# dp[1]: dp becomes [0, 1, 6, 6, 6, 6]
+# dp[2]: dp becomes [0, 1, 2, 6, 6, 6]
 # ...
-# dp[5]: dp becomes [0, 1, 2, 3, 4, 5]##no of ways 1re is used  
+# dp[5]: dp becomes [0, 1, 2, 3, 4, 5]##min coins of 1re required
 # When considering the coin with value 2, update dp from left to right:
 # dp[2]: dp becomes [0, 1, 1, 3, 4, 5]
 # dp[3]: dp becomes [0, 1, 1, 2, 4, 5]
 # ...
-# dp[5]: dp becomes [0, 1, 1, 2, 2, 3]##no of ways both 1rs and 2rs is used  
+# dp[5]: dp becomes [0, 1, 1, 2, 2, 3]## min no of both 1rs and 2rs coins required
 # When considering the coin with value 5, update dp from left to right:
-# dp[5]: dp becomes [0, 1, 1, 2, 2, 1]##no of ways all 1rs,2rs,5rs are used  
+# dp[5]: dp becomes [0, 1, 1, 2, 2, 1]## min no of all 1rs,2rs,5rs coins required
 # The final result is dp[5], which is 1. This means min coins requeuired to make up 5 using the coins [1, 2, 5] is 1
         
