@@ -14,6 +14,14 @@ class Solution:
                 hash_map[key] = [s]
         return hash_map.values()
 
+# OR SHORTENED VERSION USING DEFAULTDICT
+
+# s=defaultdict(list)
+# for st in strs:
+#     a=''.join(sorted(st))
+#     s[a].append(st)
+# return s.values()
+
 # T.C
 
 # O(nlogn)
