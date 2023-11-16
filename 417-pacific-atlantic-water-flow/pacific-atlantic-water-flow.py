@@ -32,4 +32,4 @@ class Solution:
             dfs(r, 0, pac, heights[r][0])
             dfs(r, COLS - 1, atl, heights[r][COLS - 1])
         
-        return pac & atl
+        return pac & atl ##present in both
