@@ -6,9 +6,8 @@ class Solution:
         dp = [amount + 1] * (amount + 1)
         dp [0] = 0 ## 0 WAYS TO MAKE AMOUNT 0
         for c in coins:
-            for a in range (1, amount + 1):
-                if a - c >= 0:## IF IT ENDS UP NEGATIVE,NO SOLUTION
-                    dp[a] = min(dp[a], 1 + dp[a - c])
+            for a in range (c, amount + 1):
+                dp[a] = min(dp[a], 1 + dp[a - c])
                     # COIN=4
                     # A=7
                     # DP[7]=1+DP[7-4]
