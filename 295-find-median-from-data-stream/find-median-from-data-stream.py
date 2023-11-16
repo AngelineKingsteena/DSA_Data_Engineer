@@ -41,23 +41,27 @@ BETTER TO UNDERSTAND IF lo is understood as left side and hi as right side
 
 class MedianFinder:
     def __init__(self):
-        self.lo = []  
-        self.hi = []  
+        self.left=[]##need to access 0th index ,so descending
+        self.right=[]
+	##              \
+        ##        right  \  
+        ##       median   --- \
+        ##         left        \
 
-    def addNum(self, num):
-        heappush(self.lo, -num)             # lo is maxheap, so -1 * num
-        heappush(self.hi, -self.lo[0])      # hi is minheap
-        heappop(self.lo)
-        
-        if len(self.lo) < len(self.hi):
-            heappush(self.lo, -self.hi[0])
-            heappop(self.hi)
-            
-    def findMedian(self):
-        if len(self.lo) > len(self.hi):
-            return -self.lo[0]                  
+    def addNum(self, num: int) -> None:
+        heappush(self.left,-num)  # is maxheap, so -1 * num
+        heappush(self.right,-self.left[0]) #is minheap
+        heappop(self.left)
+
+        if len(self.left)<len(self.right):
+            heappush(self.left,-self.right[0])
+            heappop(self.right)
+
+    def findMedian(self) -> float:
+        if len(self.left)>len(self.right):
+            return -self.left[0]
         else:
-            return (self.hi[0] - self.lo[0]) / 2  # - as low has -ve values
+            return (self.right[0]-self.left[0])/2 # - as left has -ve values
         
 # Your MedianFinder object will be instantiated and called as such:
 # obj = MedianFinder()
