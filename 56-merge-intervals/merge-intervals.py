@@ -7,9 +7,14 @@ class Solution:
         output = [intervals [0]]
         for start, end in intervals[1:]:
             latestEnd = output [-1][1]
+            ## if next interval starts before/on time with prev interval's end
+            ##  prev  --------             -------
+            ##  curr      ----------   or         -----
             if start <= latestEnd:
                 output [-1][1] = max(latestEnd, end)
             else:
+            ##  prev  --------- 
+            ##  curr                  -----
                 output.append([start, end])
         return output
         
