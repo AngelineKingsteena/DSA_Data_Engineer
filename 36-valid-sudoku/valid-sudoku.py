@@ -20,6 +20,8 @@ This will require a single traversal. The same box condition can be checked usin
                             if (pos[0]== x) or (pos[1] == y) \
                             or (pos[0]//3 == x//3 and pos[1]//3 == y//3):
                                 return False
+                    ## notice below is not under else block,coz usinf defaultdict has enabled us to
+                    #addd char and start appending values directly
                     boardMap[char].append((x,y))
    
         return True
