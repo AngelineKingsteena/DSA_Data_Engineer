@@ -10,7 +10,7 @@ class Solution:
             # Include the current candidate
             cur.append(candidates[i])
             dfs(i, cur, total + candidates[i])
-            cur.pop()
+            cur.pop() # or cur.remove(candidates[i])
             # Skip the current candidate
             dfs(i + 1, cur, total)
         dfs(0, [], 0)
