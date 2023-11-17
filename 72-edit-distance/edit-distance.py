@@ -10,15 +10,18 @@ class Solution:
         #     d   1 0 1  
         #     " 3 2 1 0
         cache = [[float("inf")] * (len (word2) + 1) for i in range(len(word1) + 1)]
+        ## fill up word2 "" (right)
         for j in range(len (word2) + 1):
             cache[len (word1)][j] = len(word2) -j
+        ## fill up word1 "" (bottom)
         for i in range(len (word1) + 1):
             cache [i][len (word2)] = len(word1)-i
+        ## excluding right and bottom i.e ""
         for i in range(len (word1) - 1,-1,-1):
             for j in range(len (word2)- 1,-1,-1):
                 if word1[i] == word2[j]:
                     cache[i][j] = cache[i + 1][j + 1]
                 else:
-                    ### 1+ COZ 1 EDIT
+                    ### 1+ COZ 1 EDIT & min(bottom,right,diagonal) seach in one of these
                     cache [i][j] = 1 +min(cache[i + 1][j], cache[i][j + 1], cache [i+1] [j+1])
         return cache[0][0]        
