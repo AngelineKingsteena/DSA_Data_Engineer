@@ -11,7 +11,7 @@ class Solution:
             total_gas += (gas[r] - cost[r])
             if total_gas < 0:
                 total_gas=0
-                ##at current r total became <0 ,so move one pointer ahead
+                ##at current total at became <0 ,so move one pointer ahead
                 l=r+1
         return l
 
