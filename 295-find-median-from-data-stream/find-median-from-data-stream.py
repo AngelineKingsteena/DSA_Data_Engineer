@@ -51,11 +51,13 @@ class MedianFinder:
     def addNum(self, num: int) -> None:
         heappush(self.left,-num)  # is maxheap, so -1 * num
         heappush(self.right,-self.left[0]) #is minheap
+	## pop the value added to right
         heappop(self.left)
 	##  This ensures that the left heap contains the smaller half of the numbers, and the right heap contains the larger half.If the size 
 	## of left becomes greater than the size of right, the largest element from left is moved to right to balance the heaps.
         if len(self.left)<len(self.right):
             heappush(self.left,-self.right[0])
+	    ## pop the value added to left
             heappop(self.right)
 
     def findMedian(self) -> float:
