@@ -18,12 +18,15 @@ class Solution:
         dummy=ListNode(0,head)
         slow=dummy
         fast=head
-        while n>0 and fast:
+        while n>0 and fast:# notice no n>=0: cause it'll delete previous node to actual "to-be" deleted node
+            ##cause :#and fast.next: will cause error in head =[1,2,3,4,5],n =2,Output=[1,2,4,5],Expected=[1,2,3,5]
             fast=fast.next
             n-=1
-        while fast:
+        while fast: :# notice no (and fast.next): cause it'll delete previous node to actual "to-be" deleted node
+            ##cause :#and fast.next: will cause error in head =[1,2,3,4,5],n =2,Output=[1,2,4,5],Expected=[1,2,3,5]
             slow=slow.next
             fast=fast.next
+            ## notice no need to break like linked list cycle
         slow.next=slow.next.next
         return dummy.next
         
