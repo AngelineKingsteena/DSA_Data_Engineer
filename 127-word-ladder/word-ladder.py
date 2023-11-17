@@ -14,6 +14,7 @@ class Solution:
                         return step+1
                     if new in wordList:
                         q.append((new,step+1))
+                        ## in test case like:-beginWord = "hot",endWord ="dog",wordList =["hot","dog"],Expected=0 to avoid loop
                         wordList.remove(new)
         return 0
         
