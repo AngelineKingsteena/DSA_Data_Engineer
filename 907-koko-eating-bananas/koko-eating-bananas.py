@@ -7,10 +7,10 @@ class Solution:
             k = (l + r) // 2
             hours = 0
             for p in piles:
-                #time=event/speed
+                #time=event/ chosen speed
                 hours += math.ceil(p / k)
             # similar check in https://leetcode.com/problems/time-based-key-value-store/
-            if hours <= h: #(both < and ==,so no elif)
+            if hours <= h: #(both < and ==,so no elif) bcoz problem says less or equal to is desirable
                 res = min(res, k)
                 r= k - 1
             else:
