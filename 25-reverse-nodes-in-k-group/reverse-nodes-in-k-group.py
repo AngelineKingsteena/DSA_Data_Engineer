@@ -17,7 +17,7 @@ class Solution:
 
         # Once the first group of k nodes is reversed, the prev variable points to the new head of the reversed group,`head` is the tail of the group and the curr variable points to the next group of nodes that haven't been processed yet.
 
-        for _ in range(k):
+        for _ in range(k): ## instead of while curr: cause,we need to reverse only k-group,not entire linke list
             nxt = curr.next
             curr.next = prev
             prev = curr
