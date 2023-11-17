@@ -5,9 +5,9 @@ class Solution:
         ## no.columns=len(word2) + 1
         #          w2
         #       a c d ""
-        # w1  a       3
-        #     b       2
-        #     d   1 0 1
+        # w1  a       3  ## 3 because w2 "" has to add d+b+a to become = w1,so 3 edits
+        #     b       2  ## 2 because w2 "" has to add d+b to become = w1,so 2 edits
+        #     d   1 0 1  
         #     " 3 2 1 0
         cache = [[float("inf")] * (len (word2) + 1) for i in range(len(word1) + 1)]
         for j in range(len (word2) + 1):
