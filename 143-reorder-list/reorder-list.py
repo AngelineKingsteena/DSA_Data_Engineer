@@ -14,6 +14,7 @@ class Solution:
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
+            ## note no need to compare if slow==fast like in linked list cycle code
         # reverse second half
         second = slow.next
         prev = slow.next = None
