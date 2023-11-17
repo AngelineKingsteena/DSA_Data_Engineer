@@ -29,7 +29,8 @@ class Solution:
 
         for i in range(ROW):
             for j in range(COL):
-                if grid[i][j] == "1" and (i, j) not in visit:
+                if grid[i][j] == "1" and (i, j) not in visit: ## crucial to check not in visit,cause this (i,j) is 
+                    # already part of another island,so no need to reconsider
                     islands += 1
                     dfs(i, j)
         return islands
