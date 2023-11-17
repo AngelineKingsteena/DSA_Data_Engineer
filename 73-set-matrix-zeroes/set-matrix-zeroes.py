@@ -28,14 +28,18 @@ class Solution:
         #3)
         for i in range(row):
             for j in range(col):
+                ## 0 found inside
                 if A[i][j]==0:
+                    ## flag it outside
                     A[i][0]=0
                     A[0][j]=0
         
         #4)
-        for i in range(1,row):
-            for j in range(1,col):
+        for i in range(1,row): ## 1 bcoz,to not disturb flag
+            for j in range(1,col): ## 1 bcoz,to not disturb flag
+                ## based on outer flag
                 if ((A[i][0]==0) or (A[0][j]==0)):
+                    ## set 0's inside
                     A[i][j]=0
         #5)
         if firstRow:
