@@ -3,7 +3,7 @@ class Solution:
 # https://www.youtube.com/watch?v=-RDzMJ33nx8&ab_channel=NeetCode
 ##i=index of s, j=index of t
         cache = {}
-        def dfs(i, j):
+        def dp(i, j):
             if j == len(t):
                 return 1
             if i == len(s):
@@ -23,10 +23,10 @@ class Solution:
                 #dfs(i + 1,j) = CURRENT I&J MATCHED MOVE TO NEXT character just in s, 
                 #cause s may(no guarantee it'll match,if it doesn't match 0 will be returned)
                 #have duplicate characters 
-                cache[(i, j)] = dfs(i + 1, j + 1) + dfs(i + 1, j)
+                cache[(i, j)] = dp(i + 1, j + 1) + dp(i + 1, j)
             else:
                 #didnt match,so maybe next character of s may match current character of t
-                cache [(i, j)] = dfs(i + 1, j)
+                cache [(i, j)] = dp(i + 1, j)
             return cache[(i, j)]
-        return dfs(0, 0)
+        return dp(0, 0)
         
