@@ -6,8 +6,8 @@
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         ## https://docs.google.com/document/d/1l9UDlLZeP0mQxExqjepsKbgYQj4nrNGUsyDlKDA1jyg/edit?usp=sharing
-        ansList = ListNode()
-        curr = ansList
+        head = ListNode()
+        ans = head
         carry = 0
         while(l1 or l2 or carry):
             
@@ -18,14 +18,14 @@ class Solution:
             carry = 1 if c >= 10 else 0
             digit = c % 10
             
-            curr.next = ListNode(digit)
+            ans.next = ListNode(digit) ## notice ans.next and not just ans =,this is to connect head to ans,in 1st iteration
             
-            curr = curr.next
+            ans = ans.next
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
             
             
-        return ansList.next
+        return head.next
             
 
 # while calculating carry, we know that largesr one digit number is 9 so 9 + 9 = 18 and if there is any carry then + 1 = 19 will be the largest sum that we will get. So carry will always be one and not more that one.
