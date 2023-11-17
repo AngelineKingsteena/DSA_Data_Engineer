@@ -20,6 +20,7 @@ class Solution:
                     return False
                 count[i] -= 1
                 if count [i] == 0:
+                    ## if we can deal hand-of-straights. properly,this sould pop ascending,else next time it'll go to false block above
                     heapq. heappop (minH)
         return True
                 
