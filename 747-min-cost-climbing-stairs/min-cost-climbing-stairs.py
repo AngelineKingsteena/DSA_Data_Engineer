@@ -2,7 +2,7 @@ class Solution:
     def minCostClimbingStairs(self, c: List[int]) -> int:
         ### in exampple [10,15,20]
         # [10,15,20,0]
-        # [min(25,30),min(15,35),20,0]#0 coz u pay nothing to keep staying on top;
+        # [min(25,30),min(35,15),20,0]#0 coz u pay nothing to keep staying on top;
         # 20 coz u have only one option pay 20,do one jump,whereas rest of the steps have option of one jump or 2 jumps
         cost=c.copy()
         cost.append(0)
