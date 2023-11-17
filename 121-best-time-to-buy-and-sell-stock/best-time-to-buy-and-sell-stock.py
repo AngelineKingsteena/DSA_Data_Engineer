@@ -8,9 +8,11 @@ class Solution:
                 ##profit=selling price-cost price
                 profit = prices[r] - prices [l]
                 maxP = max (maxP, profit)
+            ### cost price higher than selling price
             else:
-                ## move to the identified large price's index
+                ## so move c.p to the place u had lesser selling price
                 l =r
+            ## for traversal, +=1 cause to exhaust all indice options
             r +=1
         return maxP
         
