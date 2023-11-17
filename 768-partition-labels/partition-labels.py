@@ -8,7 +8,14 @@ class Solution:
         size, end = 0, 0
         for i, c in enumerate(s):
             size += 1
-            end = max(end, lastIndex [c])
+             # abcac
+            # "a"	3
+            # "b"	1
+            # "c"	4
+            # so
+            # so when i=0 = max(0,3)
+            # so when i=2 = max(3,4)  # in example res=[5]
+            end = max(end, lastIndex [c])  ## 
             if i == end:
                 res. append(size)
                 size = 0
