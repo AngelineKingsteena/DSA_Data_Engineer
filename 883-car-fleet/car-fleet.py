@@ -11,5 +11,6 @@ class Solution:
             if len(stack) >= 2 and stack[-1] <= stack[-2]:
                 ### remove the lesser time car
                 stack.pop()
+            ## basically keep storing cars in ascending order of time taken in stack ,also keep poppinf,if better component comes up
         return len(stack)
         
