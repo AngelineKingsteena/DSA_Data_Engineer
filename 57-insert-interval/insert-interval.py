@@ -15,9 +15,10 @@ class Solution:
                 # ith inteval,and take extremeties from 
                 # all i intevals and create custom new interval,
                 ##BUT DONT ADD IT YET,KEEP LOOPING 
-                # UNTIL ALL iTH INTERVAL'S ENDS FALL UNDER
+                # UNTIL ALL else condition's iTH INTERVAL'S ENDS FALL UNDER
                 # custom INTERVAL'S END
                 newInterval = [min(newInterval[0], intervals [i][0]), max(newInterval [1], intervals [i][1])]
+        # add elif,else pass newInterval
         res.append (newInterval)
         return res
         
