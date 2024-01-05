@@ -12,7 +12,7 @@ class Solution:
                 count+=1
                 prevend=min(prevend,end)
             else:
-            ##  prev  --------        or           ------
-            ##  curr  --------                --------
+            ##  prev  --------|        or  ------
+            ##  curr          |------              --------
                 prevend=end
         return count
