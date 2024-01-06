@@ -2,8 +2,8 @@ class Solution:
     def checkValidString(self, s: str) -> bool:
         # https://www.youtube.com/watch?v=QhPdNS143Qg&ab_channel=NeetCode
         # quick understable in java from 7:00:- https://youtu.be/vMbNfwfPecM?feature=shared
-        """ leftmax is "may need to be closed"
-        leftmin is like " need to be closed"""
+        """ leftmax is count of open brackets that "may need to be closed"
+        leftmin is count of open brackets that " need to be closed"""
         leftMin, leftMax = 0,0
         for c in s:
             if c =="(" :
