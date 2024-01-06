@@ -2,14 +2,8 @@ class Solution:
     def checkValidString(self, s: str) -> bool:
         # https://www.youtube.com/watch?v=QhPdNS143Qg&ab_channel=NeetCode
         # quick understable in java from 7:00:- https://youtu.be/vMbNfwfPecM?feature=shared
-        """ leftMin: Represents the minimum count of open parentheses 
-        that still need to be closed properly to maintain the validity 
-        of the string. It is used to ensure that all closing parentheses
-        have a corresponding open parenthesis to match.
-        leftMax: Represents the maximum count of open parentheses
-        that could potentially be closed. It accounts for the
-        flexibility introduced by '*' characters, which can act 
-        as either open or close parentheses. """
+        """ leftmax is "may need to be closed"
+        leftmin is like " need to be closed"""
         leftMin, leftMax = 0,0
         for c in s:
             if c =="(" :
@@ -18,9 +12,13 @@ class Solution:
                 leftMin, leftMax = leftMin - 1, leftMax - 1
             else:
                 leftMin, leftMax = leftMin - 1, leftMax + 1
+            # if max "to be closed" open bracket is -ve,string is wrong 
+            ## coz it's like "atmost" u can close -ve open brackets 
             if leftMax < 0:
                 return False
-            if leftMin < 0: # s = ( * ))
+            # if min "to be closed" open bracket is +ve,no issues,just reset it
+            # coz it's like "atleast" u can close -ve open brackets 
+            if leftmin < 0: # s = ( * ))
                 leftMin = 0
         return leftMin==0 ## shows everything can be closed properly 
         
