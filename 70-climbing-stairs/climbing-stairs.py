@@ -5,8 +5,8 @@ class Solution:
         ## t.c :-n
         #[newOne,newTwo/oldOne,oldTwo]
         #[1+1,1,1]
-        one, two = 1, 1 #two is no. of steps to reach top from top
-         #one is no. of steps to reach top from top before step
+        one, two = 1, 1 #two is no. of ways to reach top from top
+         #one is no. of ways to reach top from top before step
         ## skip last two
         for i in range(n - 1):
             # temp = one
