@@ -17,7 +17,12 @@ class DetectSquares:
                 # Multiply with the number of occurrences of the repeated point represented by self.pts[(x, y)]
                 res += self.pts[(px, y)] * self.pts[(x, py)] * self.pts[(x, y)]
         return res
-        
+  """
+  For example, if (px, py) is (2, 1), and you have points (1, 1) and (2, 2),
+  then the fourth vertex would be (1, 2)
+  because it completes the square
+  multiplication will give count only if you assume 
+  square are overlapping on top of each other    """  
 
 
 # Your DetectSquares object will be instantiated and called as such:
