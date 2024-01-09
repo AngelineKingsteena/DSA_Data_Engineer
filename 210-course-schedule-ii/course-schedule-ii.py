@@ -14,7 +14,7 @@ class Solution:
 
             cycle.add(crs)
             for pre in prereq[crs]:
-                if not dfs(i):
+                if not dfs(pre):
                     return False
                 else:
                     continue
@@ -24,7 +24,7 @@ class Solution:
             return True ## important
 
         for c in range (numCourses) :
-            if not dfs(i):
+            if not dfs(c):
                 return []
             else:
                 continue
