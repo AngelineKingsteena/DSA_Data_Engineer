@@ -10,20 +10,20 @@ class Solution:
             preMap [crs].append (pre)
         
         # visitSet = all courses along the curr DFS path
-        visitSet = set()
+        cycle = set()
         def dfs(crs) :
-            if crs in visitSet:
+            if crs in cycle:
                 return False
             if preMap[crs] == []:
                 return True
             
-            visitSet.add(crs)
+            cycle.add(crs)
             for pre in preMap[crs]:
                 if not dfs(pre): 
                     return False
                 else:
                     continue
-            visitSet.remove(crs)
+            cycle.remove(crs)
             preMap[crs] = []
             return True
         for crs in range(numCourses) :
