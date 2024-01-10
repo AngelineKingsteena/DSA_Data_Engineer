@@ -7,6 +7,9 @@ class Solution:
                 if nums[prev]<nums[next]:
                     ## #1+dp[3] because then we have to include the last element too.
                     dp[prev]=max(dp[prev],1+dp[next])
+                    """ max bcoz in [0,1,0,3,2,3] 1st index 0 is lesser following number than dp=[4	3	3	1	2	1]
+                    w/o max ,at i=0,j=1,dp[0]=3,but its gets overwritten at i=0,j=3,dp[0]=2
+                    """
         return max(dp)
 
 # Create an array and initialise its all value with 1. start a loop backwards and another loop to track the value beside it. 
