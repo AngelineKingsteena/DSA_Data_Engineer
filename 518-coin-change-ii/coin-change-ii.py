@@ -3,9 +3,9 @@ class Solution:
         #https://leetcode.com/problems/coin-change-ii/solutions/3892702/100-dynamic-programming-video-optimal-solution/
         dp = [0] * (amount + 1)
         dp[0] = 1
-        for coin in coins:
-            for j in range(coin, amount + 1):
-                dp[j] += dp[j - coin]
+        for c in coins:
+            for a in range(c, amount + 1):
+                dp[a] += dp[a - c] # [no of ways x re coins can make re.0 etc,no of ways x re coins can make rs.1,N for rs.2..etc]
         return dp[amount]
         
 ### The base case is set as dp[0] = 1. This is because there is one way to make up the amount of 0, which is by not using any coins (an empty combination).
