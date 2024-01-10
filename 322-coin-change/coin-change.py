@@ -5,9 +5,10 @@ class Solution:
         # set default values
         dp = [float("inf")] * (amount + 1)## coz 9 to amount
         dp [0] = 0 ## 0 WAYS TO MAKE AMOUNT 0
-        for c in coins:
+        for c in coins:`
+            ## COZ U CANT MAKE 1RS WITH 5RE COIN,SO RANGE(5 RE TO AMOUNT)
             for a in range (c, amount + 1):
-                dp[a] = min(dp[a], 1 + dp[a - c])
+                dp[a] = min(dp[a], 1 + dp[a - c]) # # [min x re coins required for re.0 etc,min x re coins required for rs.1,N for rs.2..etc]
                     # COIN=4
                     # A=7
                     # DP[7]=1+DP[7-4]
