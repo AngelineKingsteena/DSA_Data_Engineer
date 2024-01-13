@@ -15,6 +15,8 @@ class Solution:
                 # first step is to move ,cause no water can be held at left extreme 
                 l += 1
                 # to avoid negative at index 0 in eg [0,1,0,2]
+                # no issues if the below 2 lines is returning 0,incase of same value subtraction
+                # cause we intended to make any -ve as zero anyway,so anyway we're going to disregard values
                 leftMax = max(leftMax, height[l])
                 count += leftMax - height [l] # at index 0 in eg [0,1,0,2], it'll be 1-1=0
             else:
