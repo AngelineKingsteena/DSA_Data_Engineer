@@ -12,11 +12,13 @@ class Solution:
         count = 0
         while l < r:
             if leftMax <= rightMax:
+                # first step is to move ,cause no water can be held at left extreme 
                 l += 1
                 # to avoid negative at index 0 in eg [0,1,0,2]
                 leftMax = max(leftMax, height[l])
                 count += leftMax - height [l] # at index 0 in eg [0,1,0,2], it'll be 1-1=0
             else:
+                # first step is to move ,cause no water can be held at right extreme
                 r -= 1
                 rightMax = max(rightMax, height[r])
                 count += rightMax - height[r]
