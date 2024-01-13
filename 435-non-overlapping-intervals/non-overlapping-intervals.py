@@ -1,13 +1,15 @@
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
         # https://www.youtube.com/watch?v=nONCGxWoUfM&ab_channel=NeetCode
+        # very important to avoid end comparisons 
         intervals.sort()
         prevend=intervals[0][1]
         count=0
         for start,end in intervals[1:]:
              ## if next interval starts before with prev interval's end
-            ##  prev  --------        
-            ##  curr      ----------   
+            ##  prev  --------        or -----------
+            ##  curr      ----------      --- ------
+                                                --
             if start<prevend:
                 count+=1
                 prevend=min(prevend,end)
