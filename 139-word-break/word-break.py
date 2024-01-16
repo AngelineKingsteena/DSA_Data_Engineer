@@ -1,7 +1,7 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         dp = [True] + [False] * len(s)
-        for i in range(1, len(s) + 1):
+        for i in range( len(s) + 1):
             for w in wordDict:
                 if i - len(w) >= 0 and dp[i - len(w)] and s[:i].endswith(w):
                     dp[i] = True
@@ -10,11 +10,7 @@ class Solution:
 
 # This is based on Python. Other might be different a bit.
 
-# Initialize a list dp of size len(s) + 1, where dp[i] will indicate whether the substring up to index i (inclusive) can be segmented into words from wordDict.
-##Initialize dp[0] as True, since an empty string can always be segmented.
-    ## in example s = "applepenapple", wordDict = ["apple","pen"]
-## dp=["" can be segmented,"a" not found in wordDict,"ap" not found in wordDict,"app" not found in wordDict,"appl" not found in wordDict,"apple" found in wordDict...]
-## dp=[True,False,False,False,False,True,....]
+# Initialize a list dp of size len(s) + 1, where dp[i] will indicate whether the substring up to index i (inclusive) can be segmented into words from wordDict. Initialize dp[0] as True, since an empty string can always be segmented.
 
 # Iterate over each index i from 1 to len(s) + 1 (outer loop):
 
