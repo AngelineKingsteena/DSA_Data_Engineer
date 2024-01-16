@@ -14,7 +14,8 @@ class Solution:
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-            ## note no need to compare if slow==fast like in linked list cycle code
+            if slow==fast:
+                break
         # reverse second half
         second = slow.next
         prev = slow.next = None
@@ -25,13 +26,12 @@ class Solution:
             second = tmp
         
         # merge two halfs
-        first=head
-        sec=prev
-        while sec and first:
-            tmp1,tmp2=first.next,sec.next
+        first, second = head, prev
+        while second:
+            tmp1, tmp2 = first.next, second. next
             #reorder
-            first.next=sec
-            sec.next=tmp1
+            first.next = second
+            second. next = tmp1
             #iterate
-            first,sec=tmp1,tmp2
+            first, second = tmp1, tmp2
                 
