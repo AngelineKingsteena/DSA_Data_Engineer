@@ -4,7 +4,7 @@ class Solution:
         # LINEAR
         res = 0
         l, r = 0, len(height) - 1
-        while l < r:
+        while l <= r:
             area = (r - l) * min(height [l], height[r])
             res = max(res, area)
             ### choose the max height to increase area
