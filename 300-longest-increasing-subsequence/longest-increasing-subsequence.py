@@ -7,7 +7,8 @@ class Solution:
                 if nums[prev]<nums[next]:
                     ## #1+dp[3] because then we have to include the last element too.
                     dp[prev]=max(dp[prev],1+dp[next])
-                    """ max bcoz in [0,1,0,3,2,3] 1st index 0 is lesser following number than dp=[4	3	3	1	2	1]
+                    """ max bcoz for curr prev,we explore multiple subsequent nexts ,so we dont want max to be overwritten
+                    in [0,1,0,3,2,3] 1st index 0 is lesser following number than dp=[4	3	3	1	2	1]
                     w/o max ,at i=0,j=1,dp[0]=3,but its gets overwritten at i=0,j=3,dp[0]=2
                     in example:- oth index 0 is lesser than 1st index 1 but equal to 2nd index 0,so to avoid overwiting,we use max
                     since requirement is to find longest
