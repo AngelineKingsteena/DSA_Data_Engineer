@@ -22,7 +22,7 @@ class Solution:
                 if not dfs(pre): 
                     return False
                 else:
-                    continue
+                    pass
             cycle.remove(crs)
             preMap[crs] = []
             return True
@@ -30,7 +30,7 @@ class Solution:
             if not dfs(crs): 
                 return False
             else:
-                continue
+                pass
         return True
         # 1 -> 2
         # 3 -> 4
