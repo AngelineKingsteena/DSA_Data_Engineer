@@ -8,7 +8,7 @@ class Solution:
         # .    ↓
         # .    .
         # ↑    .  as u can see value in bottom left  will keep
-        # d...←c  moving upward,hence matrix[bottom - i][l]
+        # d...←c  moving upward,hence matrix[bottom - i][l]..
         l, r = 0, len(matrix) - 1
         top, bot = l, r
         while l <= r:
