@@ -4,6 +4,7 @@ class Solution:
         maxSub = nums [0]
         curSum = 0
         for n in nums:
+            ## ignore -ve subarray elements
             if curSum < 0:
                 curSum = 0
             curSum += n
