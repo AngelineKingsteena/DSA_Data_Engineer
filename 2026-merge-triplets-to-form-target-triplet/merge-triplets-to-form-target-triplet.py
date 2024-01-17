@@ -5,9 +5,8 @@ class Solution:
         ## goal becomes [0, 1, 0, 2, 0, 1] instead of [0,1,2]
         good = set ( )
         for t in triplets:
-            ## because the target's ith value has to be max of all the ith values of all triplets
-            ## so if ith value of triplet is greater,target cant be having max,
-            ## SO IGNORE THIS t'th triplet and move on to next triplet
+           ## ignore the triplet which has ith element greater than ith element
+           ## in target,even if one index value is greater,completely ignore full triplet
             if t[0] > target[0] or t[1] > target[1] or t[2] > target [2]:
                 continue
             for i, v in enumerate(t):
