@@ -11,7 +11,7 @@ class Solution:
         # d...←c  moving upward,hence matrix[bottom - i][l]
         l, r = 0, len(matrix) - 1
         top, bot = l, r
-        while l < r:
+        while l <= r:
             for i in range(r-l):
                 # save the topleft
                 topleft = matrix[top][l + i]
