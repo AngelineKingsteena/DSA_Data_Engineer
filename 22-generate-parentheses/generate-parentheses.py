@@ -9,7 +9,7 @@ class Solution:
         def backtrack(openN, closedN):
             if openN == closedN == n:
                 res.append("".join(stack))
-                return
+                return res
             if openN < n:
                 stack.append("(")
                 backtrack(openN + 1, closedN)
