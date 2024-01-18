@@ -22,6 +22,6 @@ class Solution:
                 if word1[i] == word2[j]:
                     cache[i][j] = cache[i + 1][j + 1]
                 else:
-                    ### 1+ COZ 1 EDIT & min(bottom,right,diagonal) seach in one of these
+                    ### 1+ COZ 1 EDIT & min(bottom--delete,right--insert,diagonal--replace) seach in one of these
                     cache [i][j] = 1 +min(cache[i + 1][j], cache[i][j + 1], cache [i+1] [j+1])
         return cache[0][0]        
