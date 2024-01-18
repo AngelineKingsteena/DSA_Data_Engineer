@@ -1,6 +1,7 @@
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
 # https://www.youtube.com/watch?v=XYi2-LPrwm4&ab_channel=NeetCode
+        ## bottom up dp approach
         ## no.rows=len(word1) + 1
         ## no.columns=len(word2) + 1
         #          w2
@@ -22,6 +23,6 @@ class Solution:
                 if word1[i] == word2[j]:
                     cache[i][j] = cache[i + 1][j + 1]
                 else:
-                    ### 1+ COZ 1 EDIT & min(bottom--delete,right--insert,diagonal--replace) seach in one of these
+                    ### 1+ COZ 1 EDIT & min(bottom--delete,right--insert,diagonal--replace) seach in one of these:- in video 5:30
                     cache [i][j] = 1 +min(cache[i + 1][j], cache[i][j + 1], cache [i+1] [j+1])
         return cache[0][0]        
