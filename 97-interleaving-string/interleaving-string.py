@@ -8,8 +8,10 @@ class Solution:
         def dfs(i, j):
             if i == len(s1) and j == len(s2):
                 return True
-            if i < len(s1) and s1[i] == s3[i+j] and dfs(i+1, j):
+                ## dfs(i+1 coz we just used i for comparison,look in bottom
+            if i < len(s1) and s1[i] == s3[i+j] and dfs(i+1, j): #s3[i+j] coz say i=2,j=2, we expect s3 4th index value to match
                 return True
+                ## dfs(i+1 coz we just used i for comparison,look in right
             if j < len(s2) and s2[j] == s3[i+j] and dfs(i, j+1):
                 return True
             return False
