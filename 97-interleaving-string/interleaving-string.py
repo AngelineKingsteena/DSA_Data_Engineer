@@ -9,6 +9,7 @@ class Solution:
             if i == len(s1) and j == len(s2):
                 return True
                 ## dfs(i+1 coz we just used i for comparison,look in bottom
+            ### why  s1[i] == s3[i+j] ,explanation in 4:30 min & dfs(i+1 coz we just used i in s1[i] == s3[i+j]
             if i < len(s1) and s1[i] == s3[i+j] and dfs(i+1, j): #s3[i+j] coz say i=2,j=2, we expect s3 4th index value to match
                 return True
                 ## dfs(i+1 coz we just used i for comparison,look in right
