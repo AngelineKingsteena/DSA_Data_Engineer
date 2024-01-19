@@ -10,6 +10,7 @@ class Solution:
                 return True
                 ## dfs(i+1 coz we just used i for comparison,look in bottom
             ### why  s1[i] == s3[i+j] ,explanation in 4:30 min & dfs(i+1 coz we just used i in s1[i] == s3[i+j]
+            ### why should dfs(i+1, j) be true ,see 12:00 min
             if i < len(s1) and s1[i] == s3[i+j] and dfs(i+1, j): #s3[i+j] coz say i=2,j=2, we expect s3 4th index value to match
                 return True
                 ## dfs(i+1 coz we just used i for comparison,look in right
