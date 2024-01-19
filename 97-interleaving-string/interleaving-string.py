@@ -1,7 +1,7 @@
 class Solution:
     # https://www.youtube.com/watch?v=3Rw3p9LrgvE&ab_channel=NeetCode
     ## in video from 10 min mark
-    ##memoisation
+    ##memoisation T.C:- 2^(m+n)
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
         if len(s1) + len(s2) != len(s3):
             return False
@@ -18,7 +18,8 @@ class Solution:
                 return True
             return False
         return dfs(0,0)
-        
+
+    ##  T.C:- m*n
     # def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
     #     if len(s1) + len(s2) != len(s3):
     #         return False
