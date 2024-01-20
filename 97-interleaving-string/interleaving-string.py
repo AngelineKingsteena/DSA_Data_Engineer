@@ -29,6 +29,8 @@ class Solution:
             for j in range (len (s2), -1,-1):
                 ##11:25 timestamp on video
                 ## look in the bottom
+                 ### why  s1[i] == s3[i+j] ,explanation in 4:30 min & dfs(i+1 coz we just used i in s1[i] == s3[i+j]
+    #         ### why should dfs(i+1, j) be true ,see 12:00 min
                 if i<len(s1) and s1[i] == s3[i+j] and dp[i + 1][j]:
                     dp[i][j] = True
                 ## look in the right
