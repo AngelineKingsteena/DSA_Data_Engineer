@@ -5,6 +5,7 @@ class Solution:
         dp = [[0] * (n + 1) for _ in range(m + 1)]
 
         # Initialize the matrix with base cases
+        ## places where t is empty
         for i in range(m + 1):
             dp[i][n] = 1
 
