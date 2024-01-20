@@ -1,5 +1,7 @@
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
+        ## ecplanation https://www.youtube.com/watch?v=fFVZt-6sgyo&ab_channel=NeetCode
+        ## t.c o(n)
         res = 0
         curSum = 0
         prefixSums = { 0 : 1 } 
