@@ -7,6 +7,7 @@ class Solution:
             farthest = 0
             for i in range(l, r + 1): # here r+1,to include r also in farthest calculation according to logic
                 farthest = max(farthest, i + nums[i])
+            ## order shouldnt change ,would coz tle due to error in logic
             l = r + 1
             r = farthest
             res +=1
