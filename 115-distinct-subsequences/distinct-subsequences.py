@@ -7,7 +7,7 @@ class Solution:
         # Initialize the matrix with base cases
         ## places where t is empty
         for i in range(m + 1):
-            ## all rows of column n
+            ## all rows of column n--> t is over and now nth column is "" char
             dp[i][n] = 1
 
         # Iterate through the matrix to fill in the values
