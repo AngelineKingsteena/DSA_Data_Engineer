@@ -13,7 +13,6 @@ class Solution:
                 ## at index 1,height 5 can extend even on left side to index 0,so we pop (0,2) and use 0 as index for height 5 in stack
                 maxArea = max(maxArea, height * (i - index)) #len*breadth ,where breadth is difference b/w 2 max heights' indices (current -past)
                 start = index                        #   /
-            ## maintains monotonically increasing stack /
+            ## maintains monotonically increasing stack /  by popping out smaller heights than current height
             stack.append ((start, h)) 
         return maxArea
-        
