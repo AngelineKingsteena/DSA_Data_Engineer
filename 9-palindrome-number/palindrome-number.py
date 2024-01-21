@@ -8,8 +8,4 @@ class Solution:
         while x!=0:
             reversed_x = reversed_x * 10 + x % 10
             x //= 10
-        print(reversed_x)
-        # When the length is an odd number, we can get rid of the middle digit by reversed_x//10
-        # For example, when dealing with 12321, at the end of the loop we get x = 12, reversed_x = 123,
-        # since the middle digit doesn't matter in palindrome (it will always equal to itself), we can simply get rid of it.
-        return n == reversed_x #or x == reversed_x // 10
+        return n == reversed_x 
