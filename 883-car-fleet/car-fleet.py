@@ -12,6 +12,9 @@ class Solution:
             if len(stack) >= 2 and stack[-1] <= stack[-2]:
                 ### remove the lesser time car
                 stack.pop()
-            ## basically keep storing cars in ascending order of time taken in stack ,also keep poppinf,if better component comes up
+            ## basically keep storing cars in ascending order of time taken in stack by popping the least time taking
         return len(stack)
         
+### regardless of faster/slower,the speed of car closest to target is first added into stack,
+        # so any car slower than this speed will end up creating a seperate fleet,
+        # else if theyre faster,they'll merge with the car in front of it,so pop out speed of front car
