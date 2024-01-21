@@ -1,6 +1,7 @@
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
         ## video solution :- https://www.youtube.com/watch?v=zx5Sw9130L0&ab_channel=NeetCode
+         ## maintains monotonically increasing stack /  by popping out smaller heights than current height
         maxArea = 0
         stack = [] # pair: (index, height)
 ##It's for handling when the last item isn't included into the stack yet.
