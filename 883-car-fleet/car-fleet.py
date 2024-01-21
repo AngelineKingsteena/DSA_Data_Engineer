@@ -1,6 +1,9 @@
 class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         ## video solution :-https://www.youtube.com/watch?v=Pr6T-3yB9RM&ab_channel=NeetCode
+        ### keep only higher spped cars,by popping lower speed one,
+        ## coz say final result stack is [2,9,19]--- it means 3 fleets wherein [x cars had speed<=2,y cars had speed<=9,z cars had speed<=19]
+        ## where x,y,z can be 1 or more
         pair = [[p, s] for p, s in zip(position, speed)]
         stack = []
         # sorted and reversed coz, the car closeest to destination will anyway block the rest of the cars behind it to maybe form a fleet,if they catch up
