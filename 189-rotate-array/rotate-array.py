@@ -14,3 +14,15 @@ class Solution:
         helper(i,j)
         i,j=k,len(nums)-1
         helper(i,j)
+
+
+# let's do a dry run with an example list 
+# nums = [1, 2, 3, 4, 5, 6, 7] and k = 3:
+# k=k%len(nums): 
+# k = 3 % 7 = 3
+# helper(i,j): 
+# Reverse the entire list: nums = [7, 6, 5, 4, 3, 2, 1]
+# i,j=0,k-1 and helper(i,j): 
+# Reverse the first k elements: nums = [5, 6, 7, 4, 3, 2, 1]
+# i,j=k,len(nums)-1 and helper(i,j): 
+# Reverse the remaining elements: nums = [5, 6, 7, 1, 2, 3, 4]
