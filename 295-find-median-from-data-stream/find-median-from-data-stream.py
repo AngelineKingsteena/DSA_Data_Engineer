@@ -49,6 +49,21 @@ class MedianFinder:
         ##         left        \
 
     def addNum(self, num: int) -> None:
+	"""
+         here logic is left is large in size while holding 
+	 left side small values & right is small in size while holding
+         large values
+
+         so since here left is holding count-wise large numbers,we 
+	 first push into left & then keep a check to maintain left being 
+         large in count/length
+
+         if you want left to hold small values & be small in size,
+	 push into right first & keep a check if right is large in length
+
+        also we use maxheap here coz left(small in value) element's highest will be the closest to middle/median
+	& rights(high in values) element's lowest will be closer to middle/median
+        """
         heappush(self.left,-num)  # is maxheap, so -1 * num
         heappush(self.right,-self.left[0]) #is minheap
 	## pop the value added to right
