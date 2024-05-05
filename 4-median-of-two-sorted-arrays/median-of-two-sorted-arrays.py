@@ -1,4 +1,4 @@
-class Solution:
+noclass Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         ## video solution :-https://www.youtube.com/watch?v=q6IEA26hvXc&ab_channel=NeetCode
         A, B = nums1, nums2
@@ -9,9 +9,9 @@ class Solution:
             A, B = B, A
         l, r = 0, len(A) - 1
         while True:
-            i = (l + r) // 2 # A # uptil i is left partition of a
+            i = (l + r) // 2 # i is the index of left digit(found in A) to middle of A+B
             ##-2 BCOZ HALF-I WILL CONSIDER INDICES,BUT WE WANT HALF OF NO. OF ELEMENTS RATHER THAN INDICES,2 BECOZ J STARTS AT 0,I STARTS AT 0
-            j= half - i - 2 # B # uptil j is left partition of b
+            j= half - i - 2 # j is the index of left digit(found in B) to middle of A+B
             Aleft = A[i] if i >= 0 else float("-infinity")
             Aright = A[i + 1] if (i + 1) < len(A) else float("infinity")
             Bleft = B[j] if j >= 0 else float("-infinity")
